@@ -11,3 +11,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn{
+ @apply p-2 mb-3 flex justify-center items-center cursor-pointer
+ border-2 border-black bg-white 
+}
+
+.ingredientGrid{
+  @apply grid gap-1 text-center text-xs
+  grid-cols-3 grid-rows-1
+  xs:text-base
+  sm:text-lg
+  md:grid-cols-4 md:grid-rows-6 md:w-3/5 md:text-sm
+  lg:text-base
+  xl:w-2/4 xl:text-lg
+  2xl:text-xl
+}
+
+
+
+.ingredientGridItem{
+  @apply bg-blue-50 rounded p-5 cursor-pointer
+  flex justify-center items-center 
+  transform hover:scale-95
+  h-20
+  xs:h-24
+  sm:h-28
+  md:h-24
+  lg:h-28
+  2xl:h-32
+}
+
+.ingredientGridItemAltColors{
+  @apply bg-red-400
+}
