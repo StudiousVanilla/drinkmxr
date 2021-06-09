@@ -13,6 +13,11 @@ module.exports = {
     extend: {
       fontSize:{
         'xs':'0.9rem'
+      },
+      colors: {
+        'alcohol': '#F87171', 
+        'mixer': '#34D399', 
+        'extra': '#60A5FA', 
       }
     },
   },

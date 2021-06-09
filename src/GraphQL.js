@@ -3,11 +3,14 @@ const GraphqlTest = () => {
     const graphQLquery = async () =>{
 
             const query = 
-            `query ($id: String){
-                drink(id: $id){
+            `query ($ingredients: String){
+                drinks(ingredients: $ingredients){
                     strDrink
+                    idDrink
                     drinkInfo{
+                        strAlcoholic
                         strGlass
+                        numIngredients
                     }
                 }
             }`

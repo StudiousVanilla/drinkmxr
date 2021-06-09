@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 100vw;
 }
 
 code {
@@ -12,17 +15,18 @@ code {
     monospace;
 }
 
+/* add hidden to opbtionback! */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .btn{
- @apply p-2 mb-3 flex justify-center items-center cursor-pointer
- border-2 border-black bg-white 
+ @apply flex justify-center items-center cursor-pointer bg-white 
 }
 
 .ingredientGrid{
-  @apply grid gap-1 text-center text-xs
+  @apply p-3 grid gap-1 text-center text-xs
   grid-cols-3 grid-rows-1
   xs:text-base
   sm:text-lg
@@ -37,7 +41,7 @@ code {
 .ingredientGridItem{
   @apply bg-blue-50 rounded p-5 cursor-pointer
   flex justify-center items-center 
-  transform hover:scale-95
+  transform md:hover:scale-95
   h-20
   xs:h-24
   sm:h-28
@@ -46,6 +50,35 @@ code {
   2xl:h-32
 }
 
-.ingredientGridItemAltColors{
+.alcoholAltColors{
   @apply bg-red-400
+}
+
+.mixerAltColors{
+  @apply bg-green-400
+}
+
+.extraAltColors{
+  @apply bg-blue-400
+}
+
+.optionsContainer{
+  @apply absolute top-0 left-full z-0 
+  ease-in duration-500 transform translate-x-0
+  flex-col mt-6 pt-7 bg-white
+}
+
+.slideInLeft{
+  @apply flex transition ease-in duration-500 transform -translate-x-full
+}
+
+.OptionBack{
+  @apply absolute top-1 left-4 h-16 w-16
+  flex justify-center items-center rounded-full 
+  bg-gray-100  md:hidden z-10
+}
+
+
+.reveal{
+  @apply block
 }

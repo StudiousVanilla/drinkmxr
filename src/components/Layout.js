@@ -1,17 +1,21 @@
-import { Link } from "react-router-dom";
+import {BrowserRouter as  Router, Route, Switch} from 'react-router-dom'
+import IngredientData from './ingredients/IngredientsData'
 
 
 
-const Layout = (props) => {
+const Layout = () => {
+
     return (
-    <div className="'w-screen flex justify-evenly pt-4 text-purple-300">
-        <Link to="/">
-            <button className="btn h-8">home</button>
-        </Link>
-        <Link to="/ingredients">
-            <button className="btn h-8">ingredients</button>
-        </Link>
-    </div>
+        <Router>
+            <Switch>
+                <Route exact path='/'>
+                    <div className="App"></div>
+                </Route>
+                <Route exact path='/ingredients'>
+                    <IngredientData/>
+                </Route>
+            </Switch>
+        </Router>
     );
 }
  

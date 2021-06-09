@@ -1,38 +1,36 @@
-const Ingredients = ({basicAlcohol, chosenAlcohol, toggleAlcohol}) => {
-
-
+const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptions, chosenAlcohol, chosenMixer, chosenExtra}) => {
     return ( 
-        <div className="flex justify-center md:justify-start w-full mb-24">
-            <div className="w-11/12 p-3 ingredientGrid">
-                {basicAlcohol.map(ingredient=> 
-
-                    <div 
-                    onClick={()=>toggleAlcohol(ingredient)}
-                    key={ingredient} 
-                    className="ingredientGridItem"
-                    id={ingredient.split(' ').join('')}>
-                        {ingredient}
-                    </div>
-
-                )}
+        <div className="h-screen w-full flex flex-col justify-evenly items-center">
+            
+            <div className="flex flex-col h-1/3 w-full justify-evenly items-center">
+                <button 
+                className="w-24 px-3 py-2 rounded-full text-xl flex justify-center items-center bg-alcohol text-white " 
+                onClick={toggleAlcoholOptions}>
+                    Alcohol
+                </button>
+                <p>{chosenAlcohol}</p>
             </div>
-            <div className="hidden md:w-3/5 md:p-3 
-            md:grid md:gap-1 md:grid-cols-4 md:grid-rows-6 
-            md:text-center md:text-sm
-            lg:text-base
-            xl:w-2/4 xl:text-lg
-            2xl:text-xl">
-                {chosenAlcohol.map(ingredient=> 
-                    <div 
-                    onClick={()=>toggleAlcohol(ingredient)}
-                    key={`chosen+${ingredient}`} 
-                    className="ingredientGridItem">
-                        {ingredient}
-                    </div>
-                )}               
+
+            <div className="flex flex-col h-1/3 w-full justify-evenly items-center">
+                <button 
+                className="w-24 px-3 py-2 rounded-full text-xl flex justify-center items-center bg-mixer text-white" 
+                onClick={toggleMixerOptions}>
+                    Mixer
+                </button>
+                <p>{chosenMixer}</p>
             </div>
+
+            <div className="flex flex-col h-1/3 w-full justify-evenly items-center">
+                <button 
+                className="w-24 px-3 py-2 rounded-full text-xl flex justify-center items-center bg-extra text-white" 
+                onClick={toggleExtraOptions}>
+                    Extra
+                </button>
+                <p>{chosenExtra}</p>
+            </div>
+
+
         </div>
-
      );
 }
  
