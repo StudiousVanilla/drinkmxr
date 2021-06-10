@@ -9,9 +9,6 @@ const Layout = () => {
         <Router>
             <Switch>
                 <Route exact path='/'>
-                    <div className="App"></div>
-                </Route>
-                <Route exact path='/ingredients'>
                     <IngredientData/>
                 </Route>
             </Switch>

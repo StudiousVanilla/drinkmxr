@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptions, chosenAlcohol, chosenMixer, chosenExtra}) => {
     return ( 
         <div className="h-screen w-full flex flex-col justify-evenly items-center">
@@ -28,6 +30,12 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
                 </button>
                 <p>{chosenExtra}</p>
             </div>
+
+            <button>
+                <Link to="/drinks">
+                    Search
+                </Link>
+            </button>
 
 
         </div>

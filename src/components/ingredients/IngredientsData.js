@@ -1,8 +1,10 @@
+import {BrowserRouter as  Router, Route, Switch} from 'react-router-dom'
 import { useState } from 'react';
 import Ingredients from './Ingredients'
 import AlcoholOptions from './alcohol/AlcoholOptions'
 import MixerOptions from './mixer/MixerOptions'
 import ExtraOptions from './extra/ExtraOptions'
+import DrinkData from '../drinks/DrinkData'
 
 
 
@@ -94,7 +96,6 @@ const IngredientsData = () => {
 
     const updateMixerStlye = (id) =>{
         const ingredient = document.querySelector(`#${id.split(' ').join('')}`)
-        console.log(ingredient.key)
         ingredient.classList.toggle('mixerAltColors')
     }
 
@@ -163,7 +164,6 @@ const IngredientsData = () => {
 
     const updateExtraStlye = (id) =>{
         const ingredient = document.querySelector(`#${id.split(' ').join('')}`)
-        console.log(ingredient.key)
         ingredient.classList.toggle('extraAltColors')
     }
 
@@ -212,58 +212,62 @@ const IngredientsData = () => {
     ]
 
 
-
-
-    // full page seach options to remove ingredients
-
-
-
  
 
         
     return (
-        <div>
-            <div className="relative mx-auto w-screen overflow-x-hidden">
-                <Ingredients 
-                toggleAlcoholOptions={toggleAlcoholOptions}
-                toggleMixerOptions={toggleMixerOptions}
-                toggleExtraOptions={toggleExtraOptions}
-                chosenAlcohol={chosenAlcohol}
-                chosenMixer={chosenMixer}
-                chosenExtra={chosenExtra}
-                />
-                
-                
-                <AlcoholOptions 
-                basicAlcohol={basicAlcohol} 
-                toggleAlcohol={toggleAlcohol} 
-                toggleAlcoholOptions={toggleAlcoholOptions}
-                chosenAlcohol={chosenAlcohol}
-                chosenMixer={chosenMixer}
-                chosenExtra={chosenExtra}
-                />
+        <Router>
+            <Switch>
+                <Route exact path='/'>
+                    <div className="relative mx-auto w-screen overflow-x-hidden">
+                    <Ingredients 
+                    toggleAlcoholOptions={toggleAlcoholOptions}
+                    toggleMixerOptions={toggleMixerOptions}
+                    toggleExtraOptions={toggleExtraOptions}
+                    chosenAlcohol={chosenAlcohol}
+                    chosenMixer={chosenMixer}
+                    chosenExtra={chosenExtra}
+                    />
+                    
+                    
+                    <AlcoholOptions 
+                    basicAlcohol={basicAlcohol} 
+                    toggleAlcohol={toggleAlcohol} 
+                    toggleAlcoholOptions={toggleAlcoholOptions}
+                    chosenAlcohol={chosenAlcohol}
+                    chosenMixer={chosenMixer}
+                    chosenExtra={chosenExtra}
+                    />
 
-                <MixerOptions 
-                basicMixer={basicMixer} 
-                toggleMixer={toggleMixer} 
-                toggleMixerOptions={toggleMixerOptions}
-                chosenAlcohol={chosenAlcohol}
-                chosenMixer={chosenMixer}
-                chosenExtra={chosenExtra}
-                />
+                    <MixerOptions 
+                    basicMixer={basicMixer} 
+                    toggleMixer={toggleMixer} 
+                    toggleMixerOptions={toggleMixerOptions}
+                    chosenAlcohol={chosenAlcohol}
+                    chosenMixer={chosenMixer}
+                    chosenExtra={chosenExtra}
+                    />
 
-                <ExtraOptions 
-                basicExtra={basicExtra} 
-                toggleExtra={toggleExtra} 
-                toggleExtraOptions={toggleExtraOptions}
-                chosenAlcohol={chosenAlcohol}
-                chosenMixer={chosenMixer}
-                chosenExtra={chosenExtra}
-                />
-
-
-            </div>
-        </div>
+                    <ExtraOptions 
+                    basicExtra={basicExtra} 
+                    toggleExtra={toggleExtra} 
+                    toggleExtraOptions={toggleExtraOptions}
+                    chosenAlcohol={chosenAlcohol}
+                    chosenMixer={chosenMixer}
+                    chosenExtra={chosenExtra}
+                    />
+                </div>
+                </Route>
+                <Route exact path='/drinks'>
+                    <DrinkData
+                    chosenAlcohol={chosenAlcohol}
+                    chosenMixer={chosenMixer}
+                    chosenExtra={chosenExtra}
+                    />
+                </Route>
+            </Switch>
+        </Router>
+            
 
     );
 }
