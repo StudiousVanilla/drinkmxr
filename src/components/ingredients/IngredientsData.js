@@ -1,5 +1,5 @@
 import {BrowserRouter as  Router, Route, Switch} from 'react-router-dom'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Ingredients from './Ingredients'
 import AlcoholOptions from './alcohol/AlcoholOptions'
 import MixerOptions from './mixer/MixerOptions'
@@ -211,6 +211,39 @@ const IngredientsData = () => {
         'Extra24' 
     ]
 
+    
+    // ingredientArray is sued to0 generate searchQuery
+    const [ingredientsArray, setIngredientsArray] = useState([])
+
+    useEffect(()=>{
+
+        setIngredientsArray([chosenAlcohol, chosenMixer, chosenExtra])
+
+    }, [chosenAlcohol, chosenMixer, chosenExtra])
+
+
+    // searchQuery used by DrinkData to fetch from API
+    const [searchQuery, setSearchQuery] = useState('test')
+
+
+    // updates searchQuery 
+    useEffect(()=>{
+
+        // removes any empty arrays from array of arrays [alcohol, meixer, extra]
+        const tidyIngredientsArray = (array) =>{            
+            const tidyArray = array.filter(ingredient => ingredient.length > 0)
+            return tidyArray
+        }
+
+        // sets new SearchQuery by combining all the elements in the ingredients array into a string
+        const updateSearchQuery = (array) =>{
+            return tidyIngredientsArray(array).join(',').replace(/\s/gi,'_')
+        }
+
+        setSearchQuery(updateSearchQuery(ingredientsArray))
+
+    },[ingredientsArray])
+
 
  
 
@@ -219,6 +252,7 @@ const IngredientsData = () => {
         <Router>
             <Switch>
                 <Route exact path='/'>
+                    
                     <div className="relative mx-auto w-screen overflow-x-hidden">
                     <Ingredients 
                     toggleAlcoholOptions={toggleAlcoholOptions}
@@ -260,9 +294,7 @@ const IngredientsData = () => {
                 </Route>
                 <Route exact path='/drinks'>
                     <DrinkData
-                    chosenAlcohol={chosenAlcohol}
-                    chosenMixer={chosenMixer}
-                    chosenExtra={chosenExtra}
+                    searchQuery={searchQuery}
                     />
                 </Route>
             </Switch>

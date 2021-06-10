@@ -1,52 +1,44 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom"
+import { useEffect, useMemo, useState } from "react";
 import ingredientsSearch from '../../GraphQL'
+import DrinkList from './DrinkList'
 
-const DrinkData= ({chosenAlcohol, chosenMixer, chosenExtra}) => {
+const DrinkData= ({searchQuery}) => {
 
-    // sets State to an array of arrays
-    const [ingredientsArray] = useState([chosenAlcohol, chosenMixer, chosenExtra])
+    const queryCheck = useMemo(()=>{
+        return searchQuery
+    },[searchQuery])
 
-    const [searchQuery, setSearchQuery] = useState('')
 
-    const [drinks, setDrinks] = useState([''])
-    
-    // removes any array that has a length of 0 (empty array)
-    const tidyIngredientsArray = (array) =>{
-        const tidyArray = array.filter(ingredient => ingredient.length > 0)
-        return tidyArray
-    }
-    
-    const updateSearchQuery = () =>{
-        setSearchQuery(tidyIngredientsArray(ingredientsArray)
-                        .join(',').replace(/\s/gi,'_'))
-    }
-
-    const graphQLTest = async () =>{
-        const newDrinks = await ingredientsSearch(searchQuery)
-        const sortDrinks = newDrinks.data.drinks.sort((a,b) => 
-        a.drinkInfo.numIngredients - b.drinkInfo.numIngredients)
-        setDrinks(sortDrinks)
-    }
-
+    const [drinks, setDrinks] = useState([])
 
     useEffect(()=>{
-        updateSearchQuery()
-    })
+
+        console.log(1)
+
+        // fetches drinks from backend using graphQL and searchQuery 
+        const getDrinks = async (query) =>{
+            // uses new/formatted searchQuery to fetch drink datat
+            const newDrinks = await ingredientsSearch(query)
+    
+            // sorts drinks by number o0f ingredients
+            const sortDrinks = newDrinks.data.drinks.sort((a,b) => 
+            a.drinkInfo.numIngredients - b.drinkInfo.numIngredients)
+    
+            // sets drinks State to new sorted array
+            setDrinks(sortDrinks)
+        }
+
+        getDrinks(queryCheck)
+
+        
+    },[queryCheck])
+
 
     return ( 
         <div>
-            <button>
-                <Link to="/">
-                    ingredients
-                </Link>
-            </button>
-            <button onClick={()=>console.log(drinks)}>
-                log
-            </button>
-            <button onClick={graphQLTest}>
-                graphql
-            </button>
+            <div>
+                <DrinkList drinks={drinks}/>
+            </div>
         </div>
      );
 }
