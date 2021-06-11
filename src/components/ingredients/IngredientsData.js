@@ -211,8 +211,11 @@ const IngredientsData = () => {
         'Extra24' 
     ]
 
+
+    // data used to generate drink search query
+
     
-    // ingredientArray is sued to0 generate searchQuery
+    // ingredientArray is sued to generate searchQuery
     const [ingredientsArray, setIngredientsArray] = useState([])
 
     useEffect(()=>{
@@ -253,7 +256,7 @@ const IngredientsData = () => {
             <Switch>
                 <Route exact path='/'>
                     
-                    <div className="relative mx-auto w-screen overflow-x-hidden">
+                    <div className="relative mx-auto w-screen h-screen overflow-x-hidden">
                     <Ingredients 
                     toggleAlcoholOptions={toggleAlcoholOptions}
                     toggleMixerOptions={toggleMixerOptions}
@@ -292,7 +295,9 @@ const IngredientsData = () => {
                 </div>
                 </Route>
                 <Route exact path='/drinks'>
-                    <DrinksData searchQuery={searchQuery}/>
+                    <div className="relative mx-auto w-screen h-screen overflow-x-hidden">
+                        <DrinksData searchQuery={searchQuery}/>
+                    </div>
                 </Route>
             </Switch>
         </Router>

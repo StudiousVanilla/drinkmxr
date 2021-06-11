@@ -3,8 +3,13 @@
 const Drink = ({toggleDrinkDisplay, drink}) => {
 
     return ( 
-        <div className=" bg-purple-200 w-screen h-screen sticky top-1 left-1">
-            <div className="">
+        <div 
+        className="fixed top-0 left-full z-0 
+        ease-in duration-500 transform translate-x-0
+        h-full
+        flex-col bg-purple-100" 
+        id="drinkDisplay">
+            <div className="w-screen h-2/4 bg-yellow-200">
                 <div onClick={toggleDrinkDisplay} className="mb-10">
                     back
                 </div>

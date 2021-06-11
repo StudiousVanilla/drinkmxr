@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptions, chosenAlcohol, chosenMixer, chosenExtra}) => {
     return ( 
-        <div className="h-screen w-full flex flex-col justify-evenly items-center">
+        <div className="fixed h-screen w-full flex flex-col justify-evenly items-center">
             
             <div className="flex flex-col h-1/3 w-full justify-evenly items-center">
                 <button 

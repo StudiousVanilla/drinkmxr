@@ -3,8 +3,7 @@ import {ingredientsSearch, drinkSearch} from '../../GraphQL'
 import DrinkList from './DrinkList'
 import Drink from './Drink'
 
-const DrinkData= ({searchQuery}) => {
-
+const DrinksData= ({searchQuery}) => {
 
     
     // list of drinks
@@ -21,9 +20,14 @@ const DrinkData= ({searchQuery}) => {
             // sorts drinks by number o0f ingredients
             const sortDrinks = newDrinks.data.drinks.sort((a,b) => 
             a.drinkInfo.numIngredients - b.drinkInfo.numIngredients)
-    
+
+            // interval set to give drink shaker animation time if data fetch successful / fast
+            setInterval(()=>{
             // sets drinks State to new sorted array
             setDrinks(sortDrinks)
+            },3000)
+    
+            
         }
 
         getDrinks(searchQuery)
@@ -63,24 +67,12 @@ const DrinkData= ({searchQuery}) => {
     
 
 
-
-
-   
-
-
     return ( 
-        <div className="relative mx-auto w-screen overflow-x-hidden">
-                <DrinkList 
-                drinks={drinks} 
-                getDrink={getDrink}
-                />
-            <div className="optionsContainer" id="drinkDisplay">
-                <Drink 
-                drink={drink}
-                toggleDrinkDisplay={toggleDrinkDisplay}/>
-            </div>
+        <div className="h-full">
+            <DrinkList drinks={drinks} getDrink={getDrink}/>
+            <Drink  drink={drink}toggleDrinkDisplay={toggleDrinkDisplay}/>
         </div>
      );
 }
  
-export default DrinkData;
+export default DrinksData;
