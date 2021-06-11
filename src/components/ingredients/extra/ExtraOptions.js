@@ -6,7 +6,7 @@ const ExtraOptions = ({basicExtra, toggleExtra, toggleExtraOptions, chosenAlcoho
 
 
     return ( 
-        <div className="optionsContainer" id="ExtraOptions">
+        <div className="optionsContainer mt-6 pt-7" id="ExtraOptions">
             <Searchbar/>
             <Options options={basicExtra} toggleIngredient={toggleExtra}/>
             <OptionExtraBack toggleExtraOptions={toggleExtraOptions} chosenAlcohol={chosenAlcohol} chosenMixer={chosenMixer} chosenExtra={chosenExtra} />

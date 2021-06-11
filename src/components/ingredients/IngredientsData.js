@@ -4,7 +4,7 @@ import Ingredients from './Ingredients'
 import AlcoholOptions from './alcohol/AlcoholOptions'
 import MixerOptions from './mixer/MixerOptions'
 import ExtraOptions from './extra/ExtraOptions'
-import DrinkData from '../drinks/DrinkData'
+import DrinksData from '../drinks/DrinksData'
 
 
 
@@ -263,7 +263,6 @@ const IngredientsData = () => {
                     chosenExtra={chosenExtra}
                     />
                     
-                    
                     <AlcoholOptions 
                     basicAlcohol={basicAlcohol} 
                     toggleAlcohol={toggleAlcohol} 
@@ -293,9 +292,7 @@ const IngredientsData = () => {
                 </div>
                 </Route>
                 <Route exact path='/drinks'>
-                    <DrinkData
-                    searchQuery={searchQuery}
-                    />
+                    <DrinksData searchQuery={searchQuery}/>
                 </Route>
             </Switch>
         </Router>

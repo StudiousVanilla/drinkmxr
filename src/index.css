@@ -65,7 +65,7 @@ code {
 .optionsContainer{
   @apply absolute top-0 left-full z-0 
   ease-in duration-500 transform translate-x-0
-  flex-col mt-6 pt-7 bg-white
+  flex-col bg-white
 }
 
 .slideInLeft{

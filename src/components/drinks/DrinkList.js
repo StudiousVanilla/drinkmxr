@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-const DrinkList = ({drinks}) => {
+const DrinkList = ({drinks, getDrink}) => {
 
     return ( 
-        <div>
-            <div>
+        <div className="relative">
+            <div className=" mb-5">
                 <button>
                     <Link to='/'>
                         ingredeints
@@ -16,12 +16,15 @@ const DrinkList = ({drinks}) => {
             {drinks.length > 0 &&
                 <div>
                     {drinks.map(drink=>
-                        
-                        <div key={drink.idDrink}
+                        <div 
+                        key={drink.idDrink}
+                        onClick={()=>getDrink(drink.idDrink)}
                         className="mb-8">
                             <p>{drink.strDrink}</p>
                             <p>{drink.idDrink}</p>
-                            <p></p>
+                            <p>{drink.drinkInfo.strGlass}</p>
+                            <p>{drink.drinkInfo.strAlcoholic}</p>
+                            <p>Ingredients: {drink.drinkInfo.numIngredients}</p>
                         </div>
                         
                         )}
