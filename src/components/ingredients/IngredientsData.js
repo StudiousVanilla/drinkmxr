@@ -95,7 +95,7 @@ const IngredientsData = () => {
     }
 
     const updateMixerStlye = (id) =>{
-        const ingredient = document.querySelector(`#${id.split(' ').join('')}`)
+        const ingredient = document.querySelector(`#${id.split(' ').join('_')}`)
         ingredient.classList.toggle('mixerAltColors')
     }
 
@@ -212,9 +212,11 @@ const IngredientsData = () => {
     ]
 
 
-    // data used to generate drink search query
+
+    // search query
 
     
+
     // ingredientArray is sued to generate searchQuery
     const [ingredientsArray, setIngredientsArray] = useState([])
 
@@ -248,6 +250,18 @@ const IngredientsData = () => {
     },[ingredientsArray])
 
 
+    
+    // used to maintain ingredient style/class changes between renders
+    const maintainOptionStyling = (chosenIngredient, ingredientClass) =>{
+        if(chosenIngredient.length > 0) {
+            chosenIngredient.forEach((ingredient)=>{
+                let element = document.querySelector(`#${ingredient.split(' ').join('_')}`)
+                element.classList.add(`${ingredientClass}AltColors`)
+            })
+        }
+    }
+
+
  
 
         
@@ -273,6 +287,7 @@ const IngredientsData = () => {
                     chosenAlcohol={chosenAlcohol}
                     chosenMixer={chosenMixer}
                     chosenExtra={chosenExtra}
+                    maintainOptionStyling={maintainOptionStyling}
                     />
 
                     <MixerOptions 
@@ -282,6 +297,7 @@ const IngredientsData = () => {
                     chosenAlcohol={chosenAlcohol}
                     chosenMixer={chosenMixer}
                     chosenExtra={chosenExtra}
+                    maintainOptionStyling={maintainOptionStyling}
                     />
 
                     <ExtraOptions 
@@ -291,6 +307,7 @@ const IngredientsData = () => {
                     chosenAlcohol={chosenAlcohol}
                     chosenMixer={chosenMixer}
                     chosenExtra={chosenExtra}
+                    maintainOptionStyling={maintainOptionStyling}
                     />
                 </div>
                 </Route>

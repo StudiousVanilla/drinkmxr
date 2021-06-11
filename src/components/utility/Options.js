@@ -8,7 +8,7 @@ const Options = ({options, toggleIngredient}) => {
                     onClick={()=>toggleIngredient(ingredient)}
                     key={ingredient} 
                     className="ingredientGridItem"
-                    id={ingredient.split(' ').join('')}>
+                    id={ingredient.split(' ').join('_')}>
                         {ingredient}
                     </div>
                 )}

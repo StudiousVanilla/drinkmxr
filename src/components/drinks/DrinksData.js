@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {ingredientsSearch, drinkSearch} from '../../GraphQL'
 import DrinkList from './DrinkList'
-import Drink from './Drink'
+import DrinkData from './DrinkData'
 
 const DrinksData= ({searchQuery}) => {
 
@@ -16,16 +16,25 @@ const DrinksData= ({searchQuery}) => {
         const getDrinks = async (query) =>{
             // uses new/formatted searchQuery to fetch drink datat
             const newDrinks = await ingredientsSearch(query)
-    
-            // sorts drinks by number o0f ingredients
-            const sortDrinks = newDrinks.data.drinks.sort((a,b) => 
-            a.drinkInfo.numIngredients - b.drinkInfo.numIngredients)
 
-            // interval set to give drink shaker animation time if data fetch successful / fast
-            setInterval(()=>{
-            // sets drinks State to new sorted array
-            setDrinks(sortDrinks)
-            },3000)
+            if( newDrinks !== null){
+
+                // sorts drinks by number o0f ingredients
+                const sortDrinks = newDrinks.data.drinks.sort((a,b) => 
+                a.drinkInfo.numIngredients - b.drinkInfo.numIngredients)
+
+                // interval set to give drink shaker animation time if data fetch successful / fast
+                setInterval(()=>{
+                // sets drinks State to new sorted array
+                setDrinks(sortDrinks)
+                },3000)
+
+            }
+            else{
+                console.log('nope')
+            }
+    
+            
     
             
         }
@@ -70,7 +79,7 @@ const DrinksData= ({searchQuery}) => {
     return ( 
         <div className="h-full">
             <DrinkList drinks={drinks} getDrink={getDrink}/>
-            <Drink  drink={drink}toggleDrinkDisplay={toggleDrinkDisplay}/>
+            <DrinkData  drink={drink} toggleDrinkDisplay={toggleDrinkDisplay}/>
         </div>
      );
 }

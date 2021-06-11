@@ -1,8 +1,15 @@
+import { useEffect } from 'react'
 import OptionAlcoholBack from './OptionAlcoholBack'
 import Searchbar from '../../utility/SearchBar'
 import Options from '../../utility/Options'
 
-const AlcoholOptions = ({basicAlcohol, toggleAlcohol, toggleAlcoholOptions, chosenAlcohol, chosenMixer, chosenExtra}) => {
+const AlcoholOptions = ({basicAlcohol, toggleAlcohol, toggleAlcoholOptions, chosenAlcohol, chosenMixer, chosenExtra, maintainOptionStyling}) => {
+
+    useEffect(()=>{
+        // 're-highlights' chosen ingrtedients from the previous search
+        maintainOptionStyling(chosenAlcohol, 'alcohol')
+
+    })
 
 
     return ( 

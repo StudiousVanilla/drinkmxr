@@ -25,8 +25,14 @@ const ingredientsSearch = async (ingredientString) =>{
         })
 
         const data = await json.json()
-        return data
 
+        if(data.errors){
+            return null
+        }
+        else{
+            console.log(data)
+            return data
+        }
 
     } catch (error) {
         console.log(`error is : ${error}`);
@@ -41,37 +47,9 @@ const drinkSearch = async (idString)=>{
                 strDrink
                 idDrink
                 strGlass
-                strMeasure1
-                strMeasure2
-                strMeasure3
-                strMeasure4
-                strMeasure5
-                strMeasure6
-                strMeasure7
-                strMeasure8
-                strMeasure9
-                strMeasure10
-                strMeasure11
-                strMeasure12
-                strMeasure13
-                strMeasure14
-                strMeasure15
-                strIngredient1
-                strIngredient2
-                strIngredient3
-                strIngredient4
-                strIngredient5
-                strIngredient6
-                strIngredient7
-                strIngredient8
-                strIngredient9
-                strIngredient10
-                strIngredient11
-                strIngredient12
-                strIngredient13
-                strIngredient14
-                strIngredient15
                 strInstructions
+                ingredients
+                measures
             }
         }`
 
@@ -85,7 +63,9 @@ const drinkSearch = async (idString)=>{
             })
     
             const data = await json.json()
+
             return data
+
     
     
         } catch (error) {

@@ -6,7 +6,7 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
             
             <div className="flex flex-col h-1/3 w-full justify-evenly items-center">
                 <button 
-                className="w-24 px-3 py-2 rounded-full text-xl flex justify-center items-center bg-alcohol text-white " 
+                className="ingredientBtn bg-alcohol" 
                 onClick={toggleAlcoholOptions}>
                     Alcohol
                 </button>
@@ -15,7 +15,7 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
 
             <div className="flex flex-col h-1/3 w-full justify-evenly items-center">
                 <button 
-                className="w-24 px-3 py-2 rounded-full text-xl flex justify-center items-center bg-mixer text-white" 
+                className="ingredientBtn bg-mixer" 
                 onClick={toggleMixerOptions}>
                     Mixer
                 </button>
@@ -24,14 +24,15 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
 
             <div className="flex flex-col h-1/3 w-full justify-evenly items-center">
                 <button 
-                className="w-24 px-3 py-2 rounded-full text-xl flex justify-center items-center bg-extra text-white" 
+                className="ingredientBtn bg-extra" 
                 onClick={toggleExtraOptions}>
                     Extra
                 </button>
                 <p>{chosenExtra}</p>
             </div>
 
-            <button>
+            <button
+            className="ingredientBtn bg-black m-4" >
                 <Link to="/drinks">
                     Search
                 </Link>

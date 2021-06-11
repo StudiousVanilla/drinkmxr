@@ -45,7 +45,9 @@ code {
   2xl:text-xl
 }
 
-
+.ingredientBtn{
+  @apply w-24 px-3 py-2 rounded-full text-xl flex justify-center items-center text-white
+}
 
 .ingredientGridItem{
   @apply bg-blue-50 rounded p-5 cursor-pointer
@@ -77,17 +79,18 @@ code {
   flex-col bg-white
 }
 
-.slideInLeft{
-  @apply flex transition ease-in duration-500 transform -translate-x-full
-}
-
 .OptionBack{
   @apply absolute top-1 left-4 h-16 w-16
   flex justify-center items-center rounded-full 
   bg-gray-100  md:hidden z-10
 }
 
-
 .reveal{
   @apply block
 }
+
+.slideInLeft{
+  @apply flex transition ease-in duration-500 transform -translate-x-full
+}
+
+

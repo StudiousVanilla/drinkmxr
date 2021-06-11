@@ -1,8 +1,15 @@
+import { useEffect } from 'react'
 import OptionMixerBack from './OptionMixerBack'
 import Searchbar from '../../utility/SearchBar'
 import Options from '../../utility/Options'
 
-const MixerOptions = ({basicMixer, toggleMixer, toggleMixerOptions, chosenMixer, chosenAlcohol, chosenExtra}) => {
+const MixerOptions = ({basicMixer, toggleMixer, toggleMixerOptions, chosenMixer, chosenAlcohol, chosenExtra, maintainOptionStyling}) => {
+
+    useEffect(()=>{
+        // 're-highlights' chosen ingrtedients from the previous search
+        maintainOptionStyling(chosenMixer, 'mixer')
+
+    })
 
 
     return ( 

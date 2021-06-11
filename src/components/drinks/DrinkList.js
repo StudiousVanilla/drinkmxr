@@ -5,9 +5,9 @@ const DrinkList = ({drinks, getDrink}) => {
     return ( 
         <div className="h-full">
             
-            <button className="h-10">
+            <button className="m-5 ingredientBtn bg-alcohol">
                 <Link to='/'>
-                    ingredeints
+                    back
                 </Link>
             </button>
 
