@@ -4,7 +4,7 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
     return ( 
         <div className="fixed h-screen w-full flex flex-col justify-evenly items-center">
             
-            <div className="flex flex-col h-1/3 w-full justify-evenly items-center">
+            <div className="flex flex-col h-1/4 w-full justify-evenly items-center">
                 <button 
                 className="ingredientBtn bg-alcohol" 
                 onClick={toggleAlcoholOptions}>
@@ -13,7 +13,7 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
                 <p>{chosenAlcohol}</p>
             </div>
 
-            <div className="flex flex-col h-1/3 w-full justify-evenly items-center">
+            <div className="flex flex-col h-1/4 w-full justify-evenly items-center">
                 <button 
                 className="ingredientBtn bg-mixer" 
                 onClick={toggleMixerOptions}>
@@ -22,7 +22,7 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
                 <p>{chosenMixer}</p>
             </div>
 
-            <div className="flex flex-col h-1/3 w-full justify-evenly items-center">
+            <div className="flex flex-col h-1/4 w-full justify-evenly items-center">
                 <button 
                 className="ingredientBtn bg-extra" 
                 onClick={toggleExtraOptions}>
@@ -31,12 +31,15 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
                 <p>{chosenExtra}</p>
             </div>
 
-            <button
-            className="ingredientBtn bg-black m-4" >
-                <Link to="/drinks">
-                    Search
-                </Link>
-            </button>
+            <div className="flex flex-col h-1/4 w-full justify-evenly items-center">
+                <button
+                className="ingredientBtn bg-black " >
+                    <Link to="/drinks">
+                        Search
+                    </Link>
+                </button>
+            </div>
+
 
 
         </div>
