@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {ingredientsSearch, drinkSearch} from '../../GraphQL'
 import DrinkList from './DrinkList'
 import DrinkData from './DrinkData'
+import { balloon, beer, cocktail, coffee, collins, coup, flute, highball, hurricane, jar, martini, mug, NnN, pint, pitcher, punch, shot, snifter, wine, whiskey } from "../utility/Glasses";
 
 const DrinksData= ({searchQuery}) => {
 
@@ -27,7 +28,9 @@ const DrinksData= ({searchQuery}) => {
                 setInterval(()=>{
                 // sets drinks State to new sorted array
                 setDrinks(sortDrinks)
-                },3000)
+                },
+                // add a real time back in here
+                )
 
             }
             else{
@@ -71,6 +74,51 @@ const DrinksData= ({searchQuery}) => {
 
     }
 
+    const glasses = {
+        'Pitcher': pitcher,
+        'Pousse cafe glass': hurricane,
+        'Cordial glass': hurricane,
+        'Hurricane glass': hurricane,
+        'Parfait glass': hurricane,
+        'Pint glass': pint,
+        'Margarita/Coupette glass': coup,
+        'Margarita glass': coup,
+        'Coupe Glass': coup,
+        'Whiskey Glass': whiskey,
+        'Whiskey sour glass': whiskey,
+        'Old-fashioned glass': whiskey,
+        'Old-Fashioned glass': whiskey,
+        'Brandy snifter': snifter,
+        'Balloon Glass': balloon,
+        'Nick and Nora Glass': NnN,
+        'Cocktail glass': cocktail,
+        'Cocktail Glass': cocktail,
+        'Coffee mug': mug,
+        'Coffee Mug': mug,
+        'Copper Mug': mug,
+        'White wine glass': wine,
+        'Wine Glass': wine,
+        'Martini Glass': martini,
+        'Collins Glass': collins,
+        'Collins glass': collins,
+        'Champagne flute': flute,
+        'Champagne Flute': flute,
+        'Highball glass': highball,
+        'Highball Glass': highball,
+        'Jar': jar,
+        'Mason jar': jar,
+        'Beer pilsner': beer,
+        'Beer Glass':beer,
+        'Beer mug': beer,
+        'Irish coffee cup': coffee,
+        "Punch Bowl": punch,
+        "Punch bowl": punch,
+        "Shot Glass": shot,
+        "Shot glass": shot,
+    }
+
+
+    
 
     
     
@@ -78,7 +126,7 @@ const DrinksData= ({searchQuery}) => {
 
     return ( 
         <div className="h-full">
-            <DrinkList drinks={drinks} getDrink={getDrink}/>
+            <DrinkList glasses={glasses} drinks={drinks} getDrink={getDrink}/>
             <DrinkData  drink={drink} toggleDrinkDisplay={toggleDrinkDisplay}/>
         </div>
      );

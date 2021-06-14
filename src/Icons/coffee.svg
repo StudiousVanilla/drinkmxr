@@ -1,0 +1,15 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+
+ <title/>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path stroke-linejoin="round" stroke-linecap="round" stroke="#373737" fill="none" id="svg_3" d="m47,18.5209a9.9844,9.9844 0 0 0 -2.7286,0.3866l0.877,-14.9075l-36.2967,0l2.1483,36.5209a15.961,15.961 0 0 0 6,12.4791l0,3l20,0l0,-3a15.961,15.961 0 0 0 6,-12.4791l0.1627,-2.7657a10,10 0 1 0 3.8373,-19.2343zm0,16a5.96,5.96 0 0 1 -3.5768,-1.194l0.5883,-10.0012a5.9972,5.9972 0 1 1 2.9885,11.1952z" class="cls-1"/>
+  <path stroke-linejoin="round" stroke-linecap="round" stroke="#373737" fill="none" id="svg_1" d="m14.7712,56l24.4576,0a3.7712,3.7712 0 0 1 3.7712,3.7712l0,0.2288a0,0 0 0 1 0,0l-32,0a0,0 0 0 1 0,0l0,-0.2288a3.7712,3.7712 0 0 1 3.7712,-3.7712z" class="cls-1"/>
+  <path fill="#7f3f00" id="svg_2" d="m13.4775,14.5209l1.5225,25.8828l0,0.1172a12,12 0 0 0 24,0l0,-0.1172l1.5225,-25.8828l-27.045,0z" class="cls-2"/>
+  <polygon fill="#fffaf7" id="svg_4" points="40.523 14.521 40.906 8 13.094 8 13.477 14.521 40.523 14.521" class="cls-3"/>
+ </g>
+</svg>

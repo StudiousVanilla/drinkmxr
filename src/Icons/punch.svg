@@ -1,0 +1,22 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+
+ <title/>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path stroke="#373737" fill="none" stroke-linejoin="round" stroke-linecap="round" id="svg_2" d="m49.936314,16.053996l-33.592251,0a25.635086,27.026266 0 0 0 -0.17258,39.842161l33.937411,0a25.635086,27.026266 0 0 0 -0.17258,-39.842161z" class="cls-2"/>
+  <path stroke="null" fill="#f28a8a" id="svg_3" d="m16.307154,51.688473a23.612922,23.705842 0 0 1 0.00393,-32.318712l33.554329,0a23.612922,23.705842 0 0 1 0.004507,32.318712l-33.562766,0z" class="cls-3"/>
+  <line transform="rotate(-68 26.308113098144524,26.804222106933587) " stroke="#373737" stroke-linecap="round" stroke-linejoin="round" id="svg_6" y2="43.847441" x2="15.363654" y1="9.761004" x1="37.252572" stroke-width="NaN" fill="none"/>
+  <path id="svg_13" d="m23.512967,37.241885" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="null" fill="#000000"/>
+  <path id="svg_16" d="m21.752307,36.911761" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="null" fill="#000000"/>
+  <path id="svg_18" d="m8.987527,13.14286" opacity="0.5" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="null" fill="#b58e7a"/>
+  <path id="svg_31" d="m50.381592,13.674246" opacity="0.5" fill-opacity="0" stroke-opacity="null" stroke-width="null" stroke="#373737" fill="#000000"/>
+  <ellipse stroke="#373737" ry="5.512572" rx="5.899419" id="svg_41" cy="40.511665" cx="43.123281" fill-opacity="null" stroke-opacity="null" stroke-width="NaN" fill="#373737"/>
+  <rect id="svg_42" height="6.673114" width="7.253385" y="29.679943" x="15.173573" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="null" fill="#f28a8a"/>
+  <rect id="svg_43" height="1.837524" width="10.928433" y="33.258279" x="18.945333" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="null" fill="#f28a8a"/>
+  <rect transform="rotate(-36.4019660949707 41.5758934020996,36.40141296386719) " id="svg_45" height="8.027079" width="12.765957" y="32.387873" x="35.192915" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="null" fill="#f28a8a"/>
+ </g>
+</svg>

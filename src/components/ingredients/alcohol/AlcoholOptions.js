@@ -14,7 +14,7 @@ const AlcoholOptions = ({basicAlcohol, toggleAlcohol, toggleAlcoholOptions, chos
 
     return ( 
         <div className="optionsContainer mt-6 pt-7" id="AlcoholOptions">
-            <Searchbar/>
+            <Searchbar ingredient={'alcohol'}/>
             <Options options={basicAlcohol} toggleIngredient={toggleAlcohol}/>
             <OptionAlcoholBack toggleAlcoholOptions={toggleAlcoholOptions} chosenAlcohol={chosenAlcohol} chosenMixer={chosenMixer} chosenExtra={chosenExtra}/>
         </div>

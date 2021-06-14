@@ -1,0 +1,20 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+
+ <title/>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <polygon fill="#ffe54b" id="svg_1" points="19.361 19 44.639 19 32 32.213 19.361 19" class="cls-1"/>
+  <polygon stroke-linejoin="round" stroke-linecap="round" stroke="#373737" fill="none" id="svg_2" points="44 60 20 60 30 53 34 53 44 60" class="cls-2"/>
+  <polygon stroke-linejoin="round" stroke-linecap="round" stroke="#373737" fill="none" id="svg_3" points="54 15 10 15 30 35.909 30 53 34 53 34 35.909 54 15" class="cls-2"/>
+  <path fill="#ffe54b" id="svg_4" d="m55.5355,11.4645a5,5 0 0 0 -8.5355,3.5355l10,0a4.984,4.984 0 0 0 -1.4645,-3.5355z" class="cls-1"/>
+  <path stroke-linejoin="round" stroke-linecap="round" stroke="#373737" fill="none" id="svg_5" d="m60,15a7.9751,7.9751 0 0 0 -2.3431,-5.6569l-5.6569,5.6569l8,0z" class="cls-2"/>
+  <path stroke-linejoin="round" stroke-linecap="round" stroke="#373737" fill="none" id="svg_6" d="m52,15l-5.6569,-5.6569a7.9751,7.9751 0 0 0 -2.3431,5.6569l8,0z" class="cls-2"/>
+  <polyline stroke-linejoin="round" stroke-linecap="round" stroke="#373737" fill="none" id="svg_7" points="11 4 20 4 32 15" class="cls-2"/>
+  <path stroke-linejoin="round" stroke-linecap="round" stroke="#373737" fill="none" id="svg_8" d="m46.3431,9.3431l5.6569,5.6569l0,-8a7.9751,7.9751 0 0 0 -5.6569,2.3431z" class="cls-2"/>
+  <path stroke-linejoin="round" stroke-linecap="round" stroke="#373737" fill="none" id="svg_9" d="m52,7l0,8l5.6569,-5.6569a7.9751,7.9751 0 0 0 -5.6569,-2.3431z" class="cls-2"/>
+ </g>
+</svg>

@@ -29,7 +29,7 @@ const IngredientsData = () => {
     }
 
     const updateAlcoholStlye = (id) =>{
-        const ingredient = document.querySelector(`#${id.split(' ').join('')}`)
+        const ingredient = document.querySelector(`#${id.split(' ').join('_')}`)
         ingredient.classList.toggle('alcoholAltColors')
     }
 
@@ -52,29 +52,18 @@ const IngredientsData = () => {
 
     const basicAlcohol = [
         'Amaretto',
-        'Aperol',
         'Bourbon',
         'Brandy',
         'Champagne',
-        'Cognac',
-        'Cointreau',
         'Gin',
-        'Jagermeister',
+        'Irish Whiskey',
         'Kahlua',
-        'Prosecco',
-        'Port',
-        'Red Wine',
         'Rum',
         'Sambuca',
-        'Peach Schnapps',
         'Scotch',
-        'Sherry',
-        'Southern Comfort',
         'Tequila',
-        'Triple Sec',
-        'Dry Vermouth',
-        'Vodka',
-        'Irish Whiskey']
+        'Vodka'
+        ]
 
     // mixers
 
@@ -123,24 +112,12 @@ const IngredientsData = () => {
         'Coca-Cola',
         'Coffee',
         'Cranberry Juice',
-        'Elderflower Cordial',
-        'Espresso',
         'Ginger Ale',
-        'Ginger Beer',
-        'Grapefruit Juice',
-        'Ice',
-        'Iced Tea',
-        'Lemonade',
-        'Lemon-lime Soda',
+        'Lemon Juice',
+        'Lime Juice',
         'Milk',
         'Orange Juice',
-        'Pineapple Juice',
-        'Seven Up',
-        'Soda Water',
-        'Tea',
-        'Tomato Juice',
-        'Tonic Water',
-        'Water' 
+        'Soda Water'
     ]
 
 
@@ -163,7 +140,7 @@ const IngredientsData = () => {
     }
 
     const updateExtraStlye = (id) =>{
-        const ingredient = document.querySelector(`#${id.split(' ').join('')}`)
+        const ingredient = document.querySelector(`#${id.split(' ').join('_')}`)
         ingredient.classList.toggle('extraAltColors')
     }
 
@@ -185,30 +162,18 @@ const IngredientsData = () => {
     }
 
     const basicExtra =[
-        'Extra1',
-        'Extra2',
-        'Extra3',
-        'Extra4',
-        'Extra5',
-        'Extra6',
-        'Extra7',
-        'Extra8',
-        'Extra9',
-        'Extra10',
-        'Extra11',
-        'Extra12',
-        'Extra13',
-        'Extra14',
-        'Extra15',
-        'Extra16',
-        'Extra17',
-        'Extra18',
-        'Extra19',
-        'Extra20',
-        'Extra21',
-        'Extra22',
-        'Extra23',
-        'Extra24' 
+        'Cherry',
+        'Cinnamon',
+        'Egg White',
+        'Honey',
+        'Lemon',
+        'Lime',
+        'Mint',
+        'Nutmeg',
+        'Orange',
+        'Salt',
+        'Strawberries',
+        'Sugar',
     ]
 
 
