@@ -27,7 +27,9 @@ const DrinksData= ({searchQuery}) => {
 
                 
                 // sets drinks State to new sorted array
+
                     setDrinks(sortDrinks)
+
 
 
 

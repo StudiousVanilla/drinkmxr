@@ -34,7 +34,7 @@ const DrinkList = ({drinks, getDrink, glasses}) => {
                 relative w-full h-1/3
                 flex justify-center items-center">
                     <img src={shaker} alt="Cocktail shaker"
-                    className="absolute bottom-0 w-4/5 rounded-full p-5 animate-shaker" />
+                    className="w-4/5 rounded-full p-5 animate-shaker" />
                 </div>
             </div>
             
