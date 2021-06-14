@@ -1,0 +1,17 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+
+ <title/>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#373737" stroke-linejoin="round" stroke-linecap="round" fill="#e5e5e5" id="svg_1" y="6.861073" x="28.870701" width="6.258597" height="5.138927" class="cls-1"/>
+  <polygon stroke-linejoin="round" stroke-linecap="round" stroke="#373737" fill="#aaa9ad" id="svg_2" points="44 20 20 20 22 13 27 12 37 12 42 13 44 20" class="cls-1"/>
+  <polygon fill="#aaa9ad" id="svg_3" points="39.063 16.722 35.453 16 28.547 16 24.937 16.722 24 20 40 20 39.063 16.722" class="cls-2"/>
+  <rect stroke-linejoin="round" stroke-linecap="round" stroke="#373737" fill="#e5e5e5" id="svg_4" y="20" x="18" width="28" height="4" class="cls-1"/>
+  <path stroke-linejoin="round" stroke-linecap="round" stroke="#373737" fill="#aaa9ad" id="svg_5" d="m20.110041,24l0,8l3.7547,26.2828a2,2 0 0 0 1.9799,1.7172l12.5308,0a2,2 0 0 0 1.98,-1.7172l3.7546,-26.2828l0,-8l-24,0z" class="cls-1"/>
+  <polygon stroke="null" fill="#aaa9ad" id="svg_6" points="27.469 56 24 31.716 24 28 40 28 40 31.716 36.531 56 27.469 56" class="cls-2"/>
+ </g>
+</svg>

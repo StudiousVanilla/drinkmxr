@@ -12,6 +12,7 @@ const DrinksData= ({searchQuery}) => {
 
     // fetches drinks based on search query
     useEffect(()=>{
+       
 
         // fetches drinks from backend using graphQL and searchQuery 
         const getDrinks = async (query) =>{
@@ -24,13 +25,11 @@ const DrinksData= ({searchQuery}) => {
                 const sortDrinks = newDrinks.data.drinks.sort((a,b) => 
                 a.drinkInfo.numIngredients - b.drinkInfo.numIngredients)
 
-                // interval set to give drink shaker animation time if data fetch successful / fast
-                setInterval(()=>{
+                
                 // sets drinks State to new sorted array
-                setDrinks(sortDrinks)
-                },
-                // add a real time back in here
-                )
+                    setDrinks(sortDrinks)
+
+
 
             }
             else{
@@ -116,12 +115,6 @@ const DrinksData= ({searchQuery}) => {
         "Shot Glass": shot,
         "Shot glass": shot,
     }
-
-
-    
-
-    
-    
 
 
     return ( 
