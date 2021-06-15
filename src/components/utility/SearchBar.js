@@ -1,15 +1,33 @@
+import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
+const Searchbar = ({ingredient, items, toggleIngredientAuto}) => {
+    
+    
+      const handleOnSelect = (item) => {
+        // the item selected
+        console.log(item)
 
-const Searchbar = ({ingredient}) => {
+        toggleIngredientAuto(item.name)
+        
+      }
+
+      const resetValue = () =>{
+        const inputBar = document.querySelector('.sc-bxivhb > input')
+        inputBar.style.backgroundColor = `red`
+      }
+
+      let placeholder = `Seacrh ${ingredient}...`
+
     return ( 
-        <div className="w-screen p-4 mt-16">
-            <div className="relative sm:w-96 md:mx-16 flex justify-start items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 absolute top-2 right-2 z-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-                <input type="text" 
-                className="h-10 w-96 md:full pr-8 pl-5 rounded z-0 focus:shadow focus:outline-none bg-gray-100" 
-                placeholder={`Search ${ingredient}...`}/>
+        <div className="w-screen p-4 mt-16 flex justify-start z-20">
+            <div className="w-full px-2">
+                <ReactSearchAutocomplete
+                items={items}
+                onSelect={handleOnSelect}
+                placeholder={placeholder}
+                maxResults = {5}
+                onClick={resetValue}
+                />
             </div>
         </div> 
     );

@@ -43,6 +43,15 @@ const IngredientsData = () => {
         updateAlcoholStlye(alcohol)
     };
 
+    const toggleAlcoholAuto = (alcohol) => {
+        if(chosenAlcohol.includes(alcohol)){
+            removeAlcohol(alcohol)
+        }
+        else{
+            addAlcohol(alcohol)
+        }
+    };
+
     const toggleAlcoholOptions = () =>{
         const alcoholOptions = document.querySelector('#AlcoholOptions')
         alcoholOptions.classList.toggle('slideInLeft')
@@ -105,6 +114,15 @@ const IngredientsData = () => {
         backOption.classList.toggle('reveal')
     }
 
+    const toggleMixerAuto = (mixer) => {
+        if(chosenMixer.includes(mixer)){
+            removeMixer(mixer)
+        }
+        else{
+            addMixer(mixer)
+        }
+    };
+
     const basicMixer =[
         'Apple Juice',
         'Carbonated Water',
@@ -160,6 +178,15 @@ const IngredientsData = () => {
         const backOption = document.querySelector('#OptionExtraBack')
         backOption.classList.toggle('reveal')
     }
+
+    const toggleExtraAuto = (extra) => {
+        if(chosenExtra.includes(extra)){
+            removeExtra(extra)
+        }
+        else{
+            addExtra(extra)
+        }
+    };
 
     const basicExtra =[
         'Cherry',
@@ -221,7 +248,9 @@ const IngredientsData = () => {
         if(chosenIngredient.length > 0) {
             chosenIngredient.forEach((ingredient)=>{
                 let element = document.querySelector(`#${ingredient.split(' ').join('_')}`)
-                element.classList.add(`${ingredientClass}AltColors`)
+                if(element !== null){
+                    element.classList.add(`${ingredientClass}AltColors`)
+                }
             })
         }
     }
@@ -249,6 +278,7 @@ const IngredientsData = () => {
                     basicAlcohol={basicAlcohol} 
                     toggleAlcohol={toggleAlcohol} 
                     toggleAlcoholOptions={toggleAlcoholOptions}
+                    toggleAlcoholAuto={toggleAlcoholAuto}
                     chosenAlcohol={chosenAlcohol}
                     chosenMixer={chosenMixer}
                     chosenExtra={chosenExtra}
@@ -259,6 +289,7 @@ const IngredientsData = () => {
                     basicMixer={basicMixer} 
                     toggleMixer={toggleMixer} 
                     toggleMixerOptions={toggleMixerOptions}
+                    toggleMixerAuto={toggleMixerAuto}
                     chosenAlcohol={chosenAlcohol}
                     chosenMixer={chosenMixer}
                     chosenExtra={chosenExtra}
@@ -269,6 +300,7 @@ const IngredientsData = () => {
                     basicExtra={basicExtra} 
                     toggleExtra={toggleExtra} 
                     toggleExtraOptions={toggleExtraOptions}
+                    toggleExtraAuto={toggleExtraAuto}
                     chosenAlcohol={chosenAlcohol}
                     chosenMixer={chosenMixer}
                     chosenExtra={chosenExtra}
