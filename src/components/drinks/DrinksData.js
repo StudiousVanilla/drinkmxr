@@ -16,31 +16,30 @@ const DrinksData= ({searchQuery}) => {
 
         // fetches drinks from backend using graphQL and searchQuery 
         const getDrinks = async (query) =>{
-            // uses new/formatted searchQuery to fetch drink datat
-            const newDrinks = await ingredientsSearch(query)
 
-            if( newDrinks !== null){
-
-                // sorts drinks by number o0f ingredients
-                const sortDrinks = newDrinks.data.drinks.sort((a,b) => 
-                a.drinkInfo.numIngredients - b.drinkInfo.numIngredients)
-
-                
-                // sets drinks State to new sorted array
-
-                    setDrinks(sortDrinks)
-
-
-
-
+            if(query === ''){
+                setDrinks("No drinks")
             }
             else{
-                console.log('nope')
-            }
+                // uses new/formatted searchQuery to fetch drink datat
+                const newDrinks = await ingredientsSearch(query)
     
-            
+                if( newDrinks !== null){
     
-            
+                    // sorts drinks by number o0f ingredients
+                    const sortDrinks = newDrinks.data.drinks.sort((a,b) => 
+                    a.drinkInfo.numIngredients - b.drinkInfo.numIngredients)
+    
+                    
+                    // sets drinks State to new sorted array
+                        setDrinks(sortDrinks)
+    
+                }
+                else{
+                    // if no drinks are found
+                    setDrinks("No drinks")
+                }
+            }   
         }
 
         getDrinks(searchQuery)
@@ -75,6 +74,7 @@ const DrinksData= ({searchQuery}) => {
 
     }
 
+    // used to display correct drink icon
     const glasses = {
         'Pitcher': pitcher,
         'Pousse cafe glass': hurricane,
@@ -121,7 +121,7 @@ const DrinksData= ({searchQuery}) => {
 
     return ( 
         <div className="h-full">
-            <DrinkList glasses={glasses} drinks={drinks} getDrink={getDrink}/>
+            <DrinkList glasses={glasses} drinks={drinks} getDrink={getDrink} searchQuery={searchQuery}/>
             <DrinkData  drink={drink} toggleDrinkDisplay={toggleDrinkDisplay}/>
         </div>
      );

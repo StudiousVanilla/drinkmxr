@@ -1,23 +1,20 @@
-fix: 7-Up > seven up 
 
-comment up graphQL and DrinkData files
+style: drinkList page
+add: measure, oz, shot, cup, ml tip at bottom of specfic drink page
+add: remove options on ingredient category pages
+fix: drink page - descrepancy between Tidy and unTidy arrays?
+fix: cup conversion?
 
 
 
-@keyframes rainbowtext {
-	0%   {transform: rotate(0deg); bottom: 0px;}
-	10%   {transform: rotate(5deg); bottom: 20px;}
-	20%   {transform: rotate(0deg); bottom: -10px;}
-	30%   {transform: rotate(0deg); bottom: 20px;}
-	40%   {transform: rotate(0deg); bottom: 0px;}
-	50%   {transform: rotate(-5deg); bottom: 20px;}
-	60%   {transform: rotate(0deg); bottom: -10px;}
-	65%   {transform: rotate(0deg); bottom: 0px;}
-	70%   {transform: rotate(0deg); bottom: 0px;}
-	74%   {transform: rotate(3deg); bottom: 0px;}
-	78%   {transform: rotate(-3deg); bottom: 0px;}
-	82%   {transform: rotate(3deg); bottom: 0px;}
-	86%   {transform: rotate(-3deg); bottom: 0px;}
-	90%   {transform: rotate(3deg); bottom: 0px;}
-	100%   {transform: rotate(0deg); bottom: 0px;}
-}
+fix: bourbon punch phonmenon %%%%
+fix: 2-word ingredient delete button from ingredients page %%%%%%
+fix: individual drink fixed/absolute layout %%%%%
+fix: empty strings in ingredient array on drink data page %%%%%
+fix: No search query drinks %%%%%
+add: page for no data returned %%%%%%%
+fix: 7-Up > seven up (or anything that begins with a number) %%%%%
+add: warning when ingredients gets too high %%%%%%
+add: clear all chosen ingredients %%%%%%
+add: remove options on main ingredient pages %%%%%
+add: if more than 3 options then the specific ingredients only show first and '& x others' %%%%%

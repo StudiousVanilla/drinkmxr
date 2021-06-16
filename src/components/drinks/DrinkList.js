@@ -1,8 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import shaker from '../../Icons/shaker.svg'
 
-const DrinkList = ({drinks, getDrink, glasses}) => {
+const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
+
+    // used to diplay search query if there are no drink results
+    const [queryArray, setQueryArray] = useState([])
+
+    useEffect(()=>{
+        setQueryArray(searchQuery.replace('_', ' ').split(','))
+    }, [searchQuery])
+    
 
     // moves waiting animation off screen
     const AnimationOff = () => {
@@ -44,7 +52,7 @@ const DrinkList = ({drinks, getDrink, glasses}) => {
                 </Link>
             </button>
 
-            {drinks.length > 0 &&
+            {drinks !== "No drinks" &&
                 <div className="bg-gray-50">
 
                     {drinks.map(drink=>
@@ -69,6 +77,47 @@ const DrinkList = ({drinks, getDrink, glasses}) => {
                         
                         )}
                 </div>
+            }
+
+            {drinks === "No drinks" && 
+            <div>
+
+                {queryArray[0] !== '' &&
+                <div>
+                    We couldn't find any drinks that contained:
+                    {queryArray.map(string=><p key={string}>{string}</p>)}
+                    {/* hints for users based on number of ingredients chosen */}
+                    {queryArray.length > 3 &&
+                    <div>
+                        <p>Try using fewer ingredients</p>
+                    </div>
+                    }
+                    {/* hints for users based on number of ingredients chosen */}
+                    {queryArray.length <= 3 &&
+                    <div>
+                        <p>Try using different ingredients</p>
+                    </div>
+                    }
+                </div>   
+                }
+
+                {queryArray[0] === '' &&
+                    <div>
+                        <p>No ingredients chosen. Go back and select an ingredeint or two and try again</p>
+                    </div>
+                }
+
+
+                
+                
+
+                <button className="m-5 ingredientBtn bg-black">
+                    <Link to="/">
+                        back
+                    </Link>
+                </button>
+
+            </div>
             }
 
         </div>

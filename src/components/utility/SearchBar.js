@@ -1,36 +1,35 @@
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
-const Searchbar = ({ingredient, items, toggleIngredientAuto}) => {
-    
-    
-      const handleOnSelect = (item) => {
-        // the item selected
-        console.log(item)
+const Searchbar = ({ingredient, items, toggleIngredientAuto, chosenIngredients}) => {
 
-        toggleIngredientAuto(item.name)
-        
-      }
+  // resets search bar alue to ''
+  const resetValue = () =>{
+    const inputBar = document.querySelector('.sc-bxivhb > input')
+    inputBar.value = null
+  }
 
-      const resetValue = () =>{
-        const inputBar = document.querySelector('.sc-bxivhb > input')
-        inputBar.style.backgroundColor = `red`
-      }
+  const handleOnSelect = (item) => {
+    console.log(item)
+    toggleIngredientAuto(item.name)
+  }
 
-      let placeholder = `Seacrh ${ingredient}...`
+  
 
-    return ( 
-        <div className="w-screen p-4 mt-16 flex justify-start z-20">
-            <div className="w-full px-2">
-                <ReactSearchAutocomplete
-                items={items}
-                onSelect={handleOnSelect}
-                placeholder={placeholder}
-                maxResults = {5}
-                onClick={resetValue}
-                />
-            </div>
-        </div> 
-    );
+  let placeholder = `Search ${ingredient}...`
+
+  return ( 
+      <div className="w-screen p-4 mt-16 flex justify-start z-20">
+          <div className="w-full px-2">
+              <ReactSearchAutocomplete
+              items={items}
+              onSelect={handleOnSelect}
+              placeholder={placeholder}
+              maxResults = {5}
+              onFocus={resetValue}
+              />
+          </div>
+      </div> 
+  );
 }
  
 export default Searchbar;

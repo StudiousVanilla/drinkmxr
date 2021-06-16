@@ -1,4 +1,5 @@
 
+// used to get a list of drinks based on ingredients
 const ingredientsSearch = async (ingredientString) =>{
 
         const query = 
@@ -30,7 +31,6 @@ const ingredientsSearch = async (ingredientString) =>{
             return null
         }
         else{
-            console.log(data)
             return data
         }
 
@@ -39,6 +39,7 @@ const ingredientsSearch = async (ingredientString) =>{
     }
 }
 
+// used to get info an a specfiic drink based on drink ID number
 const drinkSearch = async (idString)=>{
 
     const query = 

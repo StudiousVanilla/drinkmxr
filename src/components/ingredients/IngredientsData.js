@@ -5,6 +5,7 @@ import AlcoholOptions from './alcohol/AlcoholOptions'
 import MixerOptions from './mixer/MixerOptions'
 import ExtraOptions from './extra/ExtraOptions'
 import DrinksData from '../drinks/DrinksData'
+import Warning from '../utility/Warning'
 
 
 
@@ -29,8 +30,14 @@ const IngredientsData = () => {
     }
 
     const updateAlcoholStlye = (id) =>{
-        const ingredient = document.querySelector(`#${id.split(' ').join('_')}`)
-        ingredient.classList.toggle('alcoholAltColors')
+        // checks to see if id begins with a number (querySelector doesn't like numbers first). No number-first ingredients are in the quick select menu so no need to update style for them.
+        if(id[0].match(/[0-9]/) === null){
+            const ingredient = document.querySelector(`#${id.split(' ').join('_')}`)
+            // checks to see if ingredietn is null i.e. if it is part of quick select
+            if (ingredient !== null){
+                ingredient.classList.toggle('alcoholAltColors')
+            }
+        }
     }
 
     const toggleAlcohol = (alcohol) => {
@@ -93,8 +100,14 @@ const IngredientsData = () => {
     }
 
     const updateMixerStlye = (id) =>{
-        const ingredient = document.querySelector(`#${id.split(' ').join('_')}`)
-        ingredient.classList.toggle('mixerAltColors')
+        // checks to see if id begins with a number (querySelector doesn't like numbers first). No number-first ingredients are in the quick select menu so no need to update style for them.
+        if(id[0].match(/[0-9]/) === null){
+            const ingredient = document.querySelector(`#${id.split(' ').join('_')}`)
+             // checks to see if ingredietn is null i.e. if it is part of quick select
+            if (ingredient !== null){
+                ingredient.classList.toggle('mixerAltColors')
+            }
+        }
     }
 
     const toggleMixer = (mixer) => {
@@ -158,8 +171,14 @@ const IngredientsData = () => {
     }
 
     const updateExtraStlye = (id) =>{
-        const ingredient = document.querySelector(`#${id.split(' ').join('_')}`)
-        ingredient.classList.toggle('extraAltColors')
+        // checks to see if id begins with a number (querySelector doesn't like numbers first). No number-first ingredients are in the quick select menu so no need to update style for them.
+        if(id[0].match(/[0-9]/) === null){
+            const ingredient = document.querySelector(`#${id.split(' ').join('_')}`)
+             // checks to see if ingredietn is null i.e. if it is part of quick select
+            if (ingredient !== null){
+                ingredient.classList.toggle('extraAltColors')
+            }
+        }
     }
 
     const toggleExtra = (extra) => {
@@ -203,6 +222,21 @@ const IngredientsData = () => {
         'Sugar',
     ]
 
+    // all ingredients
+
+    const clearIngredients = () => {
+        setChosenAlcohol([])
+        setChosenMixer([])
+        setChosenExtra([])
+        const ingredientGridItmes = document.getElementsByClassName('ingredientGridItem')
+
+        for (let i = 0; i < ingredientGridItmes.length; i++) {
+            ingredientGridItmes[i].classList.remove('alcoholAltColors')
+            ingredientGridItmes[i].classList.remove('mixerAltColors')
+            ingredientGridItmes[i].classList.remove('extraAltColors')
+        }
+    }
+
 
 
     // search query
@@ -245,26 +279,37 @@ const IngredientsData = () => {
     
     // used to maintain ingredient style/class changes between renders
     const maintainOptionStyling = (chosenIngredient, ingredientClass) =>{
-        if(chosenIngredient.length > 0) {
+        // checks to see if chosenIngredient exists
+        if(chosenIngredient.length) {
             chosenIngredient.forEach((ingredient)=>{
-                let element = document.querySelector(`#${ingredient.split(' ').join('_')}`)
-                if(element !== null){
-                    element.classList.add(`${ingredientClass}AltColors`)
+                // checks to see if chosenIngredient begins with a number (querySelector doesn't like numbers first). No number-first ingredients are in the quick select menu so no need to update style for them.
+                if(ingredient[0].match(/[0-9]/) === null){
+                    let element = document.querySelector(`#${ingredient.split(' ').join('_')}`)
+                    // checks to see if element node exists
+                    if(element !== null){
+                        element.classList.add(`${ingredientClass}AltColors`)
+                    }
                 }
             })
         }
     }
 
 
- 
-
         
     return (
         <Router>
             <Switch>
                 <Route exact path='/'>
-                    
+
+                    {/* warning that appears idf there are more than 3 ingredients selected */}
                     <div className="relative mx-auto w-screen h-screen overflow-x-hidden">
+                    {(chosenAlcohol.length + chosenMixer.length+ chosenExtra.length) > 3 &&
+                        <Warning
+                        message={"Fewer ingredients will return better results"}
+                        color={"gray-500"}/>
+                    }
+
+
                     <Ingredients 
                     toggleAlcoholOptions={toggleAlcoholOptions}
                     toggleMixerOptions={toggleMixerOptions}
@@ -272,6 +317,11 @@ const IngredientsData = () => {
                     chosenAlcohol={chosenAlcohol}
                     chosenMixer={chosenMixer}
                     chosenExtra={chosenExtra}
+                    toggleAlcoholAuto={toggleAlcoholAuto}
+                    toggleAlcohol={toggleAlcohol}
+                    toggleMixer={toggleMixer}
+                    toggleExtra={toggleExtra} 
+                    clearIngredients={clearIngredients}
                     />
                     
                     <AlcoholOptions 
@@ -309,9 +359,9 @@ const IngredientsData = () => {
                 </div>
                 </Route>
                 <Route exact path='/drinks'>
-                    <div className="relative mx-auto w-screen h-screen overflow-x-hidden">
-                        <DrinksData searchQuery={searchQuery}/>
-                    </div>
+                        <div className="relative mx-auto w-screen h-screen overflow-x-hidden">
+                            <DrinksData searchQuery={searchQuery}/>
+                        </div>
                 </Route>
             </Switch>
         </Router>
