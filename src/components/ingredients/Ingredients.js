@@ -2,9 +2,11 @@ import { Link } from "react-router-dom"
 
 const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptions, chosenAlcohol, chosenMixer, chosenExtra, toggleAlcohol, toggleMixer, toggleExtra, clearIngredients}) => {
     return ( 
-        <div className="fixed h-screen w-full flex flex-col justify-evenly items-center">
+        <div className="snap snap-y snap-mandatory
+        h-screen w-full overflow-y-scroll overflow-x-hidden">
             
-            <div className="flex flex-col h-1/4 w-full justify-evenly items-center">
+            <section className="snap-start
+            flex flex-col h-screen w-full justify-evenly items-center bg-alcohol">
                 <button 
                 className="ingredientBtn bg-alcohol mb-10" 
                 onClick={toggleAlcoholOptions}>
@@ -39,12 +41,12 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
                         </button>
                     }
                 </div>
-            </div>
-
-            <div className="flex justify-between w-full">
-                <div className="flex flex-col h-1/4 w-full justify-evenly items-center">
+            </section>
+      
+            <section className="snap-start
+            flex flex-col h-screen w-full justify-evenly items-center bg-mixer">
                     <button 
-                    className="ingredientBtn bg-mixer mt-10" 
+                    className="ingredientBtn bg-mixer mb-10" 
                     onClick={toggleMixerOptions}>
                         Mixer
                     </button>
@@ -77,11 +79,12 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
                         </button>
                     }
                 </div>
-                </div>
-
-                <div className="flex flex-col h-1/4 w-full justify-evenly items-center">
+                </section>
+            
+            <section className="snap-start
+            flex flex-col h-screen w-full justify-evenly items-center bg-extra">
                     <button 
-                    className="ingredientBtn bg-extra mt-10" 
+                    className="ingredientBtn bg-extra mb-10" 
                     onClick={toggleExtraOptions}>
                         Extra
                     </button>
@@ -113,11 +116,11 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
                             </div>
                         </button>
                     }
-                </div>
-                </div>
-            </div>
+                    </div>
+                </section>
             
-            <div className="flex flex-col h-1/4 w-full justify-evenly items-center mt-24">
+            <section className="snap-start
+            flex flex-col h-screen w-full justify-evenly items-center mt-24">
                 <button
                 className="ingredientBtn bg-black " >
                     <Link to="/drinks">
@@ -127,7 +130,7 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
                 <button onClick={clearIngredients}>
                     clear
                 </button>
-            </div>
+            </section>
 
         </div>
      );

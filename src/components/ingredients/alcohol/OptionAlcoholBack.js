@@ -1,4 +1,3 @@
-import shaker from '../../../Icons/shaker.svg'
 
 const OptionAlcoholBack = ({toggleAlcoholOptions, chosenAlcohol, chosenMixer, chosenExtra}) => {
 
@@ -8,14 +7,15 @@ const OptionAlcoholBack = ({toggleAlcoholOptions, chosenAlcohol, chosenMixer, ch
         <div className="sticky bottom-0 left-0 z-10 w-full h-12
         flex justify-start items-center pl-4 
         md:hidden bg-gray-50">
-            <button id="OptionAlcoholBack" 
+            <div id="OptionAlcoholBack" 
             onClick={toggleAlcoholOptions}
-            className="flex justify-start items-center w-1/5">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
-                </svg>
-                <img src={shaker} alt="cocktial shaker" className="h-9 m-0" />
-            </button>
+            className="flex justify-start items-center w-1/2">
+                <div className="w-max m-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>
+                </div>
+            </div>
             <div className="flex w-2/3 justify-evenly">
                 {chosenAlcohol.length > 0 &&
                     <span className="

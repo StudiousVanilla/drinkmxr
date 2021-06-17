@@ -30,6 +30,7 @@ code {
 @tailwind components;
 @tailwind utilities;
 
+
 .btn{
  @apply flex justify-center items-center cursor-pointer bg-white 
 }
@@ -78,9 +79,6 @@ code {
   ease-in duration-500 transform translate-x-0 h-screen
   flex-col bg-white
 }
-
-
-
 
 .reveal{
   @apply block

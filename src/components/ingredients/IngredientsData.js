@@ -6,6 +6,7 @@ import MixerOptions from './mixer/MixerOptions'
 import ExtraOptions from './extra/ExtraOptions'
 import DrinksData from '../drinks/DrinksData'
 import Warning from '../utility/Warning'
+import OptionBack from '../utility/OptionBack'
 
 
 
@@ -356,6 +357,8 @@ const IngredientsData = () => {
                     chosenExtra={chosenExtra}
                     maintainOptionStyling={maintainOptionStyling}
                     />
+
+                    <OptionBack toggleOptions={toggleAlcoholOptions} id={"OptionAlcoholBack"} chosenAlcohol={chosenAlcohol} chosenMixer={chosenMixer} chosenExtra={chosenExtra}/>
                     
                 </div>
                 </Route>

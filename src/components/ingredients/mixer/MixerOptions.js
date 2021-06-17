@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
-import OptionMixerBack from './OptionMixerBack'
 import mixerAutoItems from './mixerSearchAutoComplete'
 import Searchbar from '../../utility/SearchBar'
 import Options from '../../utility/Options'
+import OptionBack from '../../utility/OptionBack'
 
 const MixerOptions = ({basicMixer, toggleMixer, toggleMixerOptions, toggleMixerAuto, chosenMixer, chosenAlcohol, chosenExtra, maintainOptionStyling}) => {
 
@@ -17,7 +17,7 @@ const MixerOptions = ({basicMixer, toggleMixer, toggleMixerOptions, toggleMixerA
         <div className="optionsContainer mt-6 pt-7" id="MixerOptions">
             <Searchbar items={mixerAutoItems} ingredient={'mixers'} toggleIngredientAuto={toggleMixerAuto}/>
             <Options options={basicMixer} toggleIngredient={toggleMixer}/>
-            <OptionMixerBack toggleMixerOptions={toggleMixerOptions} chosenMixer={chosenMixer} chosenAlcohol={chosenAlcohol} chosenExtra={chosenExtra}/>
+            <OptionBack toggleOptions={toggleMixerOptions} id={"OptionMixerBack"} chosenAlcohol={chosenAlcohol} chosenMixer={chosenMixer} chosenExtra={chosenExtra}/>
         </div>
      );
 }

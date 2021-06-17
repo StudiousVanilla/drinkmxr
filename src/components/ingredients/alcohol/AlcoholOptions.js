@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
-import OptionAlcoholBack from './OptionAlcoholBack'
+// import OptionAlcoholBack from './OptionAlcoholBack'
 import alcoholAutoItems from './alcoholSearchAutoComplete'
 import Searchbar from '../../utility/SearchBar'
 import Options from '../../utility/Options'
+
 
 
 const AlcoholOptions = ({basicAlcohol, toggleAlcohol, toggleAlcoholOptions, toggleAlcoholAuto,  chosenAlcohol, chosenMixer, chosenExtra, maintainOptionStyling}) => {
@@ -17,7 +18,9 @@ const AlcoholOptions = ({basicAlcohol, toggleAlcohol, toggleAlcoholOptions, togg
     return ( 
         <div className="optionsContainer" id="AlcoholOptions">
 
+
             <div className="relative h-auto">
+
                 <header className="w-full flex justify-center text-2xl p-3 bg-alcohol text-white mb-16">Alcohol</header>
                 <div className="w-full flex flex-col flex-wrap h-44 justify-start items-start">
 
@@ -57,15 +60,11 @@ const AlcoholOptions = ({basicAlcohol, toggleAlcohol, toggleAlcoholOptions, togg
                     </div>
                     )}
                 </div>
-
-
-
                 <Searchbar items={alcoholAutoItems} ingredient={'alcohol'} toggleIngredientAuto={toggleAlcoholAuto} chosenIngredients={chosenAlcohol}/>
                 <div className="pb-1 mx-3 py-2  border-b border-alcohol w-max">
                     <p className="text-lg text-alcohol font-bold">Quick Select</p>
                 </div>
                 <Options options={basicAlcohol} toggleIngredient={toggleAlcohol}/>
-                <OptionAlcoholBack toggleAlcoholOptions={toggleAlcoholOptions} chosenAlcohol={chosenAlcohol} chosenMixer={chosenMixer} chosenExtra={chosenExtra}/>
             </div>
         </div>
      );
