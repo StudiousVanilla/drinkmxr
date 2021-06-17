@@ -48,6 +48,7 @@ const Drink = ({name, glass, measures, ingredients, instructions, toggleDrinkDis
 
 
             <div className="w-screen bg-yellow-200 overflow-scroll">
+                
 
                 <div onClick={toggleDrinkDisplay} className="m-5 ingredientBtn bg-mixer">
                     back

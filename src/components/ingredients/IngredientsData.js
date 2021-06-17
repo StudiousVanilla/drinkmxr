@@ -356,6 +356,7 @@ const IngredientsData = () => {
                     chosenExtra={chosenExtra}
                     maintainOptionStyling={maintainOptionStyling}
                     />
+                    
                 </div>
                 </Route>
                 <Route exact path='/drinks'>

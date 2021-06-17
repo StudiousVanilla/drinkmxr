@@ -1,20 +1,13 @@
 
-style: drinkList page
-add: measure, oz, shot, cup, ml tip at bottom of specfic drink page
 add: remove options on ingredient category pages
+add: measure, oz, shot, cup, ml tip at bottom of specfic drink page
 fix: drink page - descrepancy between Tidy and unTidy arrays?
-fix: cup conversion?
+fix: empty strings in ingredient array on drink data page ???
+style: drinkList page
 
 
-
-fix: bourbon punch phonmenon %%%%
-fix: 2-word ingredient delete button from ingredients page %%%%%%
-fix: individual drink fixed/absolute layout %%%%%
-fix: empty strings in ingredient array on drink data page %%%%%
-fix: No search query drinks %%%%%
-add: page for no data returned %%%%%%%
-fix: 7-Up > seven up (or anything that begins with a number) %%%%%
-add: warning when ingredients gets too high %%%%%%
-add: clear all chosen ingredients %%%%%%
-add: remove options on main ingredient pages %%%%%
-add: if more than 3 options then the specific ingredients only show first and '& x others' %%%%%
+.OptionBack{
+  @apply sticky bottom-1 left-4 h-16 w-16
+  flex justify-center items-center rounded-full 
+  bg-gray-100  md:hidden z-10
+}

@@ -74,16 +74,13 @@ code {
 }
 
 .optionsContainer{
-  @apply fixed top-0 left-full z-0 
-  ease-in duration-500 transform translate-x-0
+  @apply fixed top-0 left-full z-0 overflow-scroll
+  ease-in duration-500 transform translate-x-0 h-screen
   flex-col bg-white
 }
 
-.OptionBack{
-  @apply absolute top-1 left-4 h-16 w-16
-  flex justify-center items-center rounded-full 
-  bg-gray-100  md:hidden z-10
-}
+
+
 
 .reveal{
   @apply block

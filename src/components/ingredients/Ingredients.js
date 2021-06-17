@@ -129,8 +129,6 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
                 </button>
             </div>
 
-
-
         </div>
      );
 }
