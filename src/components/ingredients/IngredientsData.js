@@ -63,8 +63,6 @@ const IngredientsData = () => {
     const toggleAlcoholOptions = () =>{
         const alcoholOptions = document.querySelector('#AlcoholOptions')
         alcoholOptions.classList.toggle('slideInLeft')
-        const backOption = document.querySelector('#OptionAlcoholBack')
-        backOption.classList.toggle('reveal')
     }
 
     const basicAlcohol = [
@@ -124,8 +122,6 @@ const IngredientsData = () => {
     const toggleMixerOptions = () =>{
         const mixerOptions = document.querySelector('#MixerOptions')
         mixerOptions.classList.toggle('slideInLeft')
-        const backOption = document.querySelector('#OptionMixerBack')
-        backOption.classList.toggle('reveal')
     }
 
     const toggleMixerAuto = (mixer) => {
@@ -195,8 +191,6 @@ const IngredientsData = () => {
     const toggleExtraOptions = () =>{
         const extraOptions = document.querySelector('#ExtraOptions')
         extraOptions.classList.toggle('slideInLeft')
-        const backOption = document.querySelector('#OptionExtraBack')
-        backOption.classList.toggle('reveal')
     }
 
     const toggleExtraAuto = (extra) => {
@@ -236,6 +230,19 @@ const IngredientsData = () => {
             ingredientGridItmes[i].classList.remove('mixerAltColors')
             ingredientGridItmes[i].classList.remove('extraAltColors')
         }
+    }
+
+    // turns off all options menus (abasically a back button that will act the same on every ingredient options page)
+    const toggleOptions = () =>{
+
+        const alcoholOptions = document.querySelector('#AlcoholOptions')
+        const mixerOptions = document.querySelector('#MixerOptions')
+        const extraOptions = document.querySelector('#ExtraOptions')
+
+        alcoholOptions.classList.remove('slideInLeft')
+        mixerOptions.classList.remove('slideInLeft')
+        extraOptions.classList.remove('slideInLeft')
+
     }
 
 
@@ -358,7 +365,7 @@ const IngredientsData = () => {
                     maintainOptionStyling={maintainOptionStyling}
                     />
 
-                    <OptionBack toggleOptions={toggleAlcoholOptions} id={"OptionAlcoholBack"} chosenAlcohol={chosenAlcohol} chosenMixer={chosenMixer} chosenExtra={chosenExtra}/>
+                    <OptionBack toggleOptions={toggleOptions} id={"OptionAlcoholBack"} chosenAlcohol={chosenAlcohol} chosenMixer={chosenMixer} chosenExtra={chosenExtra}/>
                     
                 </div>
                 </Route>

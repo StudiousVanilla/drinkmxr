@@ -80,12 +80,40 @@ code {
   flex-col bg-white
 }
 
-.reveal{
-  @apply block
-}
-
 .slideInLeft{
   @apply flex transition ease-in duration-500 transform -translate-x-full
 }
+
+.ingredient-header{
+  @apply w-full flex justify-center text-2xl p-3 text-white mb-16
+}
+
+.instructions-container{
+  @apply w-full flex flex-col flex-wrap h-44 justify-start items-start
+}
+
+.chosen-ingredient-container{
+  @apply w-1/2 flex justify-center items-center mb-4
+}
+
+.ingredient-remove-button{
+  @apply flex justify-between items-center
+  w-1/2 min-w-max rounded-2xl pl-2 pr-1 py-0.5
+}
+
+
+
+
+
+.quickSelect-container{
+  @apply pb-1 mx-5 mb-4 py-2  border-b w-max
+}
+
+.quickSelect-text{
+  @apply text-lg font-bold
+}
+
+
+
 
 

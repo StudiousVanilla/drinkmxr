@@ -4,6 +4,19 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
     return ( 
         <div className="snap snap-y snap-mandatory
         h-screen w-full overflow-y-scroll overflow-x-hidden">
+
+            <section className="snap-start
+            flex flex-col h-screen w-full justify-evenly items-center mt-24">
+                <button
+                className="ingredientBtn bg-black " >
+                    <Link to="/drinks">
+                        Search
+                    </Link>
+                </button>
+                <button onClick={clearIngredients}>
+                    clear
+                </button>
+            </section>
             
             <section className="snap-start
             flex flex-col h-screen w-full justify-evenly items-center bg-alcohol">
@@ -118,19 +131,6 @@ const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptio
                     }
                     </div>
                 </section>
-            
-            <section className="snap-start
-            flex flex-col h-screen w-full justify-evenly items-center mt-24">
-                <button
-                className="ingredientBtn bg-black " >
-                    <Link to="/drinks">
-                        Search
-                    </Link>
-                </button>
-                <button onClick={clearIngredients}>
-                    clear
-                </button>
-            </section>
 
         </div>
      );
