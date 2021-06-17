@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptions, chosenAlcohol, chosenMixer, chosenExtra, toggleAlcohol, toggleMixer, toggleExtra, clearIngredients}) => {
     return ( 
-        <div className="snap snap-y snap-mandatory
+        <div className="snap snap-y snap-proximity
         h-screen w-full overflow-y-scroll overflow-x-hidden">
 
             <section className="snap-start
