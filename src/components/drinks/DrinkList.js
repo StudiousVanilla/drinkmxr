@@ -18,16 +18,6 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
         container.classList.toggle('slideInLeft')
     }
 
-    const borderColor = (strAlcoholic) => {
-        console.log(strAlcoholic)
-        if(strAlcoholic === 'Alcoholic'){
-            return "alcohol"
-        }
-        else{
-            return "mixer"
-        }
-    }
-
 
     // checks to see if the drinks prop has been populated with data fetched from api, and when it has the waiting naimation is removed 
 
