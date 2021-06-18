@@ -6,7 +6,7 @@ import MixerOptions from './mixer/MixerOptions'
 import ExtraOptions from './extra/ExtraOptions'
 import DrinksData from '../drinks/DrinksData'
 import Warning from '../utility/Warning'
-import OptionBack from '../utility/OptionBack'
+import BottomBar from '../utility/BottomBar'
 
 
 
@@ -63,6 +63,11 @@ const IngredientsData = () => {
     const toggleAlcoholOptions = () =>{
         const alcoholOptions = document.querySelector('#AlcoholOptions')
         alcoholOptions.classList.toggle('slideInLeft')
+
+        const optionBackBtn = document.querySelector('#optionBackBtn')
+        const searchBtn = document.querySelector('#searchBtn')
+        optionBackBtn.classList.toggle('hide')
+        searchBtn.classList.toggle('hide')
     }
 
     const basicAlcohol = [
@@ -122,6 +127,11 @@ const IngredientsData = () => {
     const toggleMixerOptions = () =>{
         const mixerOptions = document.querySelector('#MixerOptions')
         mixerOptions.classList.toggle('slideInLeft')
+
+        const optionBackBtn = document.querySelector('#optionBackBtn')
+        const searchBtn = document.querySelector('#searchBtn')
+        optionBackBtn.classList.toggle('hide')
+        searchBtn.classList.toggle('hide')
     }
 
     const toggleMixerAuto = (mixer) => {
@@ -191,6 +201,11 @@ const IngredientsData = () => {
     const toggleExtraOptions = () =>{
         const extraOptions = document.querySelector('#ExtraOptions')
         extraOptions.classList.toggle('slideInLeft')
+
+        const optionBackBtn = document.querySelector('#optionBackBtn')
+        const searchBtn = document.querySelector('#searchBtn')
+        optionBackBtn.classList.toggle('hide')
+        searchBtn.classList.toggle('hide')
     }
 
     const toggleExtraAuto = (extra) => {
@@ -242,6 +257,11 @@ const IngredientsData = () => {
         alcoholOptions.classList.remove('slideInLeft')
         mixerOptions.classList.remove('slideInLeft')
         extraOptions.classList.remove('slideInLeft')
+
+        const optionBackBtn = document.querySelector('#optionBackBtn')
+        const searchBtn = document.querySelector('#searchBtn')
+        optionBackBtn.classList.toggle('hide')
+        searchBtn.classList.toggle('hide')
 
     }
 
@@ -309,12 +329,11 @@ const IngredientsData = () => {
             <Switch>
                 <Route exact path='/'>
 
+                <div className="relative mx-auto w-screen h-screen overflow-x-hidden">
+
                     {/* warning that appears idf there are more than 3 ingredients selected */}
-                    <div className="relative mx-auto w-screen h-screen overflow-x-hidden">
                     {(chosenAlcohol.length + chosenMixer.length+ chosenExtra.length) > 3 &&
-                        <Warning
-                        message={"Fewer ingredients will return better results"}
-                        color={"gray-500"}/>
+                        <Warning/>
                     }
 
 
@@ -365,10 +384,19 @@ const IngredientsData = () => {
                     maintainOptionStyling={maintainOptionStyling}
                     />
 
-                    <OptionBack toggleOptions={toggleOptions} id={"OptionAlcoholBack"} chosenAlcohol={chosenAlcohol} chosenMixer={chosenMixer} chosenExtra={chosenExtra}/>
+
+
+
+                    <BottomBar toggleOptions={toggleOptions} chosenAlcohol={chosenAlcohol} chosenMixer={chosenMixer} chosenExtra={chosenExtra}/>
                     
+
+
+
+
                 </div>
+                
                 </Route>
+
                 <Route exact path='/drinks'>
                         <div className="relative mx-auto w-screen h-screen overflow-x-hidden">
                             <DrinksData searchQuery={searchQuery}/>

@@ -26,6 +26,7 @@ const AlcoholOptions = ({basicAlcohol, toggleAlcohol, toggleAlcoholAuto,  chosen
 
                 <div className="instructions-container">
 
+                    {/* instructions */}
                     {chosenAlcohol.length <= 0 &&
 
                         <div className="w-full text-center">
@@ -46,9 +47,9 @@ const AlcoholOptions = ({basicAlcohol, toggleAlcohol, toggleAlcoholAuto,  chosen
 
                     }
 
-
+                    {/* ingredients */}
                     {chosenAlcohol.map(ingredient=>
-                    <div className="chosen-ingredient-container" key={ingredient}>
+                    <div className="chosen-ingredient-container w-full xs:w-1/2  xs:mb-8" key={ingredient}>
                         <button onClick={()=>toggleAlcohol(ingredient)}
                         className="ingredient-remove-button bg-alcohol">
                             {ingredient}

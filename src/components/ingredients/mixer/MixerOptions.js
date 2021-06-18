@@ -46,7 +46,7 @@ const MixerOptions = ({basicMixer, toggleMixer, toggleMixerAuto, chosenMixer, ma
 
 
                     {chosenMixer.map(ingredient=>
-                    <div className="chosen-ingredient-container" key={ingredient}>
+                    <div className="chosen-ingredient-container w-full mb-4 xs:w-1/2  xs:mb-8" key={ingredient}>
                         <button onClick={()=>toggleMixer(ingredient)}
                         className="ingredient-remove-button bg-mixer">
                             {ingredient}

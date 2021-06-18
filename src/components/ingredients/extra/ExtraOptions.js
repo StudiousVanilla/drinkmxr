@@ -45,7 +45,7 @@ const ExtraOptions = ({basicExtra, toggleExtra, toggleExtraAuto, chosenExtra, ma
 
 
                     {chosenExtra.map(ingredient=>
-                    <div className="chosen-ingredient-container" key={ingredient}>
+                    <div className="chosen-ingredient-container w-full mb-4 xs:w-1/2  xs:mb-8" key={ingredient}>
                         <button onClick={()=>toggleExtra(ingredient)}
                         className="ingredient-remove-button bg-extra">
                             {ingredient}

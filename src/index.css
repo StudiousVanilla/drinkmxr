@@ -36,7 +36,11 @@ code {
 }
 
 .ingredient-page-section{
-  @apply snap-start flex h-screen w-full
+  @apply snap-start h-screen w-full flex flex-col justify-start pl-8 pt-8
+}
+
+.section-title{
+  @apply pt-9 h-1/5 flex text-white
 }
 
 .section-ingredients-list-container{
@@ -45,6 +49,10 @@ code {
 
 .section-chosen-ingredients-list-item{
   @apply mb-2 flex justify-between items-center px-1 pl-2 rounded-xl
+}
+
+.section-arrow{
+  @apply w-full h-2/5 flex justify-end items-end pb-24 pr-6 text-white
 }
 
 .delete-icon{
@@ -60,10 +68,6 @@ code {
   lg:text-base
   xl:w-2/4 xl:text-lg
   2xl:text-xl
-}
-
-.ingredientBtn{
-  @apply  text-white
 }
 
 .ingredientGridItem{
@@ -85,15 +89,15 @@ code {
 }
 
 .ingredient-header{
-  @apply w-full flex justify-center text-2xl p-3 text-white mb-16
+  @apply w-full flex justify-center text-2xl p-3 text-white mb-12
 }
 
 .instructions-container{
-  @apply w-full flex flex-col flex-wrap h-44 justify-start items-start
+  @apply w-full flex flex-col flex-wrap h-48 justify-start items-start
 }
 
 .chosen-ingredient-container{
-  @apply w-1/2 flex justify-center items-center mb-4
+  @apply flex justify-center items-center
 }
 
 .ingredient-remove-button{
@@ -123,6 +127,10 @@ code {
 
 .slideInLeft{
   @apply flex transition ease-in duration-500 transform -translate-x-full
+}
+
+.hide{
+  @apply hidden
 }
 
 

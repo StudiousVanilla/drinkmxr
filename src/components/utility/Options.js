@@ -1,7 +1,7 @@
 
 const Options = ({options, toggleIngredient}) => {
     return ( 
-        <div className="container m-auto w-full mb-16 h-auto">
+        <div className="container m-auto w-full mb-32 h-auto">
             <div className="w-full ingredientGrid">
                 {options.map(ingredient=> 
                     <div 

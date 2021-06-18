@@ -36,10 +36,23 @@ module.exports = {
           '86%': { transform: 'rotate(-3deg)'},
           '90%': { transform: 'rotate(3deg)'},
           '100%': { transform: 'rotate(0deg)'},
+        },
+        smallShaker:{
+          '0%': { transform: 'rotate(0deg)'},
+          '65%': { transform: 'rotate(0deg)'},
+          '66%': { transform: 'rotate(3deg)'},
+          '70%': { transform: 'rotate(0deg)'},
+          '74%': { transform: 'rotate(3deg)'},
+          '78%': { transform: 'rotate(-3deg)'},
+          '82%': { transform: 'rotate(3deg)'},
+          '86%': { transform: 'rotate(-3deg)'},
+          '90%': { transform: 'rotate(3deg)'},
+          '100%': { transform: 'rotate(0deg)'}
         }
       },
       animation: {
         shaker: 'shaker 2.5s linear infinite',
+        smallShaker: 'smallShaker 2.5s linear infinite',
        }
     },
   }, 
