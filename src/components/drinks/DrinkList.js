@@ -18,7 +18,20 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
         container.classList.toggle('slideInLeft')
     }
 
+    const borderColor = (strAlcoholic) => {
+        console.log(strAlcoholic)
+        if(strAlcoholic === 'Alcoholic'){
+            return "alcohol"
+        }
+        else{
+            return "mixer"
+        }
+    }
+
+
     // checks to see if the drinks prop has been populated with data fetched from api, and when it has the waiting naimation is removed 
+
+    
     useEffect(()=>{
         const checkDataRecieved = () =>{
                 if(drinks.length > 0){
@@ -35,6 +48,7 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
 
 
             {/* container for loading animation */}
+
             <div className="
             fixed top-0 right-0 h-screen w-screen bg-blue-400
             flex justify-center items-center" id="animationContainer">
@@ -53,24 +67,27 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
             </button>
 
             {drinks !== "No drinks" &&
-                <div className="bg-gray-50">
+                <div className=" flex flex-col justify-center items-center
+                bg-gray-700">
 
                     {drinks.map(drink=>
 
-                    <div key={drink.idDrink} className="flex items-center">
+                    <div key={drink.idDrink} 
+                    className="flex flex-col items-center w-3/4 my-4 py-2 bg-gray-100 rounded-md border-4">
 
-                        <div 
-                        onClick={()=>getDrink(drink.idDrink)}
-                        className="mb-8 w-1/2">
+                        <div onClick={()=>getDrink(drink.idDrink)}
+                        className="w-full flex justify-start py-2 pl-2 text-xl font-bold">
                             <p>{drink.strDrink}</p>
-                            <p>{drink.idDrink}</p>
-                            <p>{drink.drinkInfo.strGlass}</p>
-                            <p>{drink.drinkInfo.strAlcoholic}</p>
-                            <p>Ingredients: {drink.drinkInfo.numIngredients}</p>
                         </div>
-                        <div className="mb-8 w-1/2">
-                            <img className="w-12"
-                            src={glasses[drink.drinkInfo.strGlass]} alt={drink.drinkInfo.strGlass} />
+                        <div className="w-full flex">
+                            <div className="w-3/5 flex flex-col justify-center items-center">
+                                <p>complexity:</p>
+                                <p>{drink.drinkInfo.numIngredients}</p>
+                            </div>
+                            <div className="flex justify-center items-end w-2/5">
+                                <img className="w-12 h-12"
+                                src={glasses[drink.drinkInfo.strGlass]} alt={drink.drinkInfo.strGlass} />
+                            </div>
                         </div>
                     </div>    
 
