@@ -4,7 +4,8 @@ import shaker from '../../Icons/shaker.svg'
 const BottomBar = ({toggleOptions, chosenAlcohol, chosenMixer, chosenExtra}) => {
 
     return ( 
-        <div className="fixed bottom-0 left-0 z-10 w-screen h-12
+        <div id="BottomBar"
+        className="fixed bottom-0 left-0 z-10 w-screen h-12
         flex justify-center items-center border-t-2 border-black
         md:hidden bg-gray-100">
 

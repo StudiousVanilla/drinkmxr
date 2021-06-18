@@ -6,6 +6,12 @@ const Searchbar = ({ingredient, items, toggleIngredientAuto, chosenIngredients})
   const resetValue = () =>{
     const inputBar = document.querySelector('.sc-bxivhb > input')
     inputBar.value = null
+
+  }
+
+  const hideBottom = () =>{
+    const bottomBar = document.querySelector('#BottomBar')
+    bottomBar.classList.toggle('hidden')
   }
 
   const handleOnSelect = (item) => {
@@ -19,7 +25,7 @@ const Searchbar = ({ingredient, items, toggleIngredientAuto, chosenIngredients})
 
   return ( 
       <div className="w-screen p-4 mt-4 flex justify-start z-20">
-          <div className="w-full px-2 mb-8 z-20">
+          <div className="w-full px-2 mb-8 z-20" onFocus={hideBottom} onBlur={hideBottom}>
               <ReactSearchAutocomplete
               items={items}
               onSelect={handleOnSelect}
