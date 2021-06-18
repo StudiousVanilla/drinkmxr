@@ -1,6 +1,7 @@
 import {BrowserRouter as  Router, Route, Switch} from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import Ingredients from './Ingredients'
+import Instructions from '../utility/Instructions'
 import AlcoholOptions from './alcohol/AlcoholOptions'
 import MixerOptions from './mixer/MixerOptions'
 import ExtraOptions from './extra/ExtraOptions'
@@ -253,16 +254,28 @@ const IngredientsData = () => {
         const alcoholOptions = document.querySelector('#AlcoholOptions')
         const mixerOptions = document.querySelector('#MixerOptions')
         const extraOptions = document.querySelector('#ExtraOptions')
+        const instructions = document.querySelector('#Instructions')
 
         alcoholOptions.classList.remove('slideInLeft')
         mixerOptions.classList.remove('slideInLeft')
         extraOptions.classList.remove('slideInLeft')
+        instructions.classList.remove('slideInLeft')
 
         const optionBackBtn = document.querySelector('#optionBackBtn')
         const searchBtn = document.querySelector('#searchBtn')
         optionBackBtn.classList.toggle('hide')
         searchBtn.classList.toggle('hide')
 
+    }
+
+    const toggleInstructions = ()=> {
+        const instructions = document.querySelector('#Instructions')
+        instructions.classList.toggle('slideInLeft')
+
+        const optionBackBtn = document.querySelector('#optionBackBtn')
+        const searchBtn = document.querySelector('#searchBtn')
+        optionBackBtn.classList.toggle('hide')
+        searchBtn.classList.toggle('hide')
     }
 
 
@@ -345,11 +358,15 @@ const IngredientsData = () => {
                     chosenMixer={chosenMixer}
                     chosenExtra={chosenExtra}
                     toggleAlcoholAuto={toggleAlcoholAuto}
+                    toggleInstructions={toggleInstructions}
                     toggleAlcohol={toggleAlcohol}
                     toggleMixer={toggleMixer}
                     toggleExtra={toggleExtra} 
                     clearIngredients={clearIngredients}
                     />
+
+                    <Instructions
+                    toggleInstructions={toggleInstructions}/>
                     
                     <AlcoholOptions 
                     basicAlcohol={basicAlcohol} 

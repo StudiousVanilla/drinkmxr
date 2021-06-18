@@ -52,7 +52,7 @@ code {
 }
 
 .section-arrow{
-  @apply w-full h-2/5 flex justify-end items-end pb-24 pr-6 text-white
+  @apply w-full h-2/5 flex justify-end items-end pb-32 pr-6 text-white
 }
 
 .delete-icon{

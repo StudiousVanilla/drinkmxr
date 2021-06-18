@@ -1,15 +1,21 @@
 
 
-const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptions, chosenAlcohol, chosenMixer, chosenExtra, toggleAlcohol, toggleMixer, toggleExtra, clearIngredients}) => {
+const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptions, chosenAlcohol, chosenMixer, chosenExtra, toggleAlcohol, toggleMixer, toggleExtra, toggleInstructions}) => {
     return ( 
         <div className="snap snap-y snap-mandatory
         h-screen w-full overflow-y-scroll overflow-x-hidden">
 
             <section className="snap-start
-            flex flex-col h-screen w-full justify-evenly items-center mt-24">
-                <button onClick={clearIngredients}>
-                    clear
+            flex flex-col h-screen w-full justify-start items-center p-4">
+
+                <div className="h-2/6
+                bg-extra">
+                    <p>Scroll down to start adding ingredeints</p>
+                </div>
+                <button onClick={toggleInstructions}>
+                    instructions
                 </button>
+
             </section>
 
 
