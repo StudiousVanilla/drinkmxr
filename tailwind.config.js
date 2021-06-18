@@ -50,38 +50,33 @@ module.exports = {
           '100%': { transform: 'rotate(0deg)'}
         },
         scrollUp1:{
-          '10%': { transform: 'translate(0px, -65px)'},
-          '50%': { transform: 'translate(0px, -65px)'},
-          '60%': { transform: 'translate(0px, 0px)'},
-          '100%': { transform: 'translate(0px, 0px)'},
+          '10%': { transform: 'translate(0px, -0px)'}, // 2s
+          '15%': { transform: 'translate(0px, -65px)'}, // 0.5s
+          '85%': { transform: 'translate(0px, -65px)'},
+          '90%': { transform: 'translate(0px, 0px)'}, // 0.5s
+          '100%': { transform: 'translate(0px, 0px)'}, // 2s
         },
         scrollUp2:{
-          '15%': { transform: 'translate(0px, -0px)'},
-          '25%': { transform: 'translate(0px, -65px)'},
-          '65%': { transform: 'translate(0px, -65px)'},
-          '75%': { transform: 'translate(0px, 0px)'},
-          '100%': { transform: 'translate(0px, 0px)'},
+          '25%': { transform: 'translate(0px, -0px)'}, // 2s
+          '30%': { transform: 'translate(0px, -65px)'}, // 0.5s
+          '75%': { transform: 'translate(0px, -65px)'},
+          '80%': { transform: 'translate(0px, 0px)'},// 0.5s
+          '90%': { transform: 'translate(0px, 0px)'}, // 2s
         },
         scrollUp3:{
-          '30%': { transform: 'translate(0px, -0px)'},
-          '45%': { transform: 'translate(0px, -65px)'},
-          '85%': { transform: 'translate(0px, -65px)'},
-          '60%': { transform: 'translate(0px, 0px)'},
-          '100%': { transform: 'translate(0px, 0px)'},
+          '45%': { transform: 'translate(0px, -0px)'}, // 2s
+          '50%': { transform: 'translate(0px, -65px)'}, // 0.5s
+          '65%': { transform: 'translate(0px, -65px)'}, //0.5s
+          '70%': { transform: 'translate(0px, 0px)'}, //0.5s
+          '80%': { transform: 'translate(0px, 0px)'}, //2s
         },
-        scrollUp4:{
-          '45%': { transform: 'translate(0px, -0px)'},
-          '60%': { transform: 'translate(0px, -65px)'},
-          '100%': { transform: 'translate(0px, -65px)'},
-        }
       },
       animation: {
         shaker: 'shaker 2.5s linear infinite',
         smallShaker: 'smallShaker 2.5s linear infinite',
-        scrollUp1: 'scrollUp1 20s linear infinite',
-        scrollUp2: 'scrollUp2 20s linear infinite',
-        scrollUp3: 'scrollUp3 20s linear infinite',
-        scrollUp4: 'scrollUp4 20s linear infinite',
+        scrollUp1: 'scrollUp1 10s linear infinite',
+        scrollUp2: 'scrollUp2 10s linear infinite',
+        scrollUp3: 'scrollUp3 10s linear infinite'
        }
     },
   }, 

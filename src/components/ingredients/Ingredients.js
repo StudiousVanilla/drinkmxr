@@ -1,26 +1,67 @@
 
 
-const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptions, chosenAlcohol, chosenMixer, chosenExtra, toggleAlcohol, toggleMixer, toggleExtra, toggleInstructions}) => {
+const Ingredients = ({toggleAlcoholOptions, toggleMixerOptions, toggleExtraOptions, chosenAlcohol, chosenMixer, chosenExtra, toggleAlcohol, toggleMixer, toggleExtra, toggleInstructions, clearIngredients}) => {
     return ( 
         <div className="snap snap-y snap-mandatory
         h-screen w-full overflow-y-scroll overflow-x-hidden">
 
-            <section className="snap-start
+            <div onClick={clearIngredients} 
+            className="absolute right-4 top-4 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+
+            <section className="snap-start bg-gray-700
             flex flex-col h-screen w-full justify-start items-center p-4">
 
-                <div className="h-2/6
-                bg-extra">
-                    <p>Scroll down to start adding ingredeints</p>
+                <div className="h-2/6 flex justify-center items-center bg-none">
+                    <p className="text-5xl font-bold text-white">
+                        Drink
+                        <span className="text-alcohol">M</span>
+                        <span className="text-mixer">X</span>
+                        <span className="text-extra">R</span> 
+                    </p>
                 </div>
-                <button onClick={toggleInstructions}>
-                    instructions
-                </button>
 
+                <div className="">
+                    <div className="text-white text-xl">
+                        <ol className="list-decimal">
+                            <li className="mb-6">Pick your ingredeints</li>
+                            <li className="mb-6">Find a drink</li>
+                            <li className="mb-6">Enjoy!</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div className="flex w-full">
+                    {/* Just a positional div */}
+                    <div className="w-3/4 flex justify-start items-end">
+                        <div className="text-white animate-pulse">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div onClick={toggleInstructions}
+                    className="flex w-1/4 text-white text-xl h-52 justify-end items-end">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                            </svg>
+                        </div>
+                        <div
+                        className=" rounded-full text-xl font-bold justify-self-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>   
+                </div>
+
+                
             </section>
-
-
-
-            
+ 
             <section className="ingredient-page-section bg-alcohol">
 
                 <div 
