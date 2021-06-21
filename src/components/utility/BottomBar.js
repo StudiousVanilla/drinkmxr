@@ -5,7 +5,7 @@ const BottomBar = ({toggleOptions}) => {
 
     return ( 
         <div id="BottomBar"
-        className="z-10 w-screen h-16 xs:h-24 pb-1
+        className="z-10 w-screen h-16 xs:h-bot pb-1
         flex justify-center items-center border-t-2 border-black
         md:hidden bg-gray-100">
 
@@ -14,7 +14,7 @@ const BottomBar = ({toggleOptions}) => {
 
                 <div id="bottomBtn"
                 className="rounded-full h-24 w-24 mb-14
-                xs:h-28 xs:w-28 xs:mb-28
+                xs:h-24 xs:w-24 xs:mb-20
                  flex justify-center items-center
                  border-4 border-black 
                  bg-white z-30">
@@ -38,7 +38,7 @@ const BottomBar = ({toggleOptions}) => {
                         </div>
                 </div> 
 
-                <p className=" hidden xs:block absolute top-28 text-lg font-bold">Shake!</p>
+                <p className=" hidden xs:block absolute top-24 text-lg font-bold">Shake!</p>
             </div>
         </div>
      );

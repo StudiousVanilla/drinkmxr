@@ -34,7 +34,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
             <section className="snap-end bg-gray-800
             flex flex-col h-full w-full justify-end items-center px-4" ref={shakerRef}>
 
-                <div className="h-1/4 flex justify-center items-center bg-none">
+                <div className="h-1/4 mt-6 flex justify-center items-center bg-none">
                     <p className="text-5xl font-bold text-white">
                         Drink
                         <span className="text-alcohol">M</span>
@@ -105,7 +105,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                 }
 
 
-                <div className="w-full h-2/6 flex justify-start items-center">
+                <div className="w-full h-1/3 xs:h-1/2 flex justify-start items-center">
                     <div className="h-3/4 w-full flex justify-evenly items-center">
                         <button className="h-20 w-20 xs:h-24 xs:w-24 rounded-md bg-alcohol" onClick={alcoholScroll}>
                             <p className="text-xxs">Add</p>
@@ -123,7 +123,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                 </div>
 
                 {/* instructions */}
-                <div className="flex w-full text-white text-xl h-10 justify-end items-end mb-6">
+                <div className="flex w-full text-white text-xl h-10 justify-end items-end mb-8 -mt-2">
                     <button onClick={toggleInstructions}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
@@ -159,8 +159,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                     }
 
                     {chosenAlcohol.length <= 3 &&
-                        <div className="section-ingredients-list-container
-                        w-full h-full items-center justify-end">
+                        <div className="section-ingredients-list-container">
                             {chosenAlcohol.map(ingredient =>
                                 <button
                                     onClick={() => toggleAlcohol(ingredient)}
@@ -227,8 +226,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                     }
 
                     {chosenMixer.length <= 3 &&
-                        <div className="section-ingredients-list-container
-                        w-full h-full items-center justify-end">
+                        <div className="section-ingredients-list-container">
                             {chosenMixer.map(ingredient =>
                                 <button
                                     onClick={() => toggleMixer(ingredient)}
@@ -248,8 +246,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
 
                     {chosenMixer.length > 3 &&
                         <div className="section-ingredients-list-container
-                        h-1/2 w-max
-                        ">
+                        h-1/2 w-max">
 
                             <button
                                 onClick={clearMixer}
@@ -295,8 +292,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                     }
 
                     {chosenExtra.length <= 3 &&
-                        <div className="section-ingredients-list-container
-                        w-full h-full items-center justify-end">
+                        <div className="section-ingredients-list-container">
                             {chosenExtra.map(ingredient =>
                                 <button
                                     onClick={() => toggleExtra(ingredient)}

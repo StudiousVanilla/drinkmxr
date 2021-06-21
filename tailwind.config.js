@@ -11,6 +11,9 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
+      height:{
+        bot: '4.5rem'
+      },
       fontSize:{
         'xs':'0.9rem',
         'xxs':'0.6rem'
@@ -71,13 +74,26 @@ module.exports = {
           '70%': { transform: 'translate(0px, 0px)'}, //0.5s
           '80%': { transform: 'translate(0px, 0px)'}, //2s
         },
+        backgroundColorCycle:{
+          '0%': {backgroundColor:'#F87171'},
+          '25%': {backgroundColor:'#F87171'},
+          '29%': {backgroundColor:'#ffffff'},
+          '33%': {backgroundColor:'#34D399'},
+          '58%': {backgroundColor:'#34D399'},
+          '62%': {backgroundColor:'#ffffff'},
+          '66%': {backgroundColor:'#60A5FA'},
+          '91%': {backgroundColor:'#60A5FA'},
+          '96%': {backgroundColor:'#ffffff'},
+          '100%': {backgroundColor:'#F87171'}
+        }
       },
       animation: {
         shaker: 'shaker 2.5s linear infinite',
         smallShaker: 'smallShaker 2.5s linear infinite',
         scrollUp1: 'scrollUp1 10s linear infinite',
         scrollUp2: 'scrollUp2 10s linear infinite',
-        scrollUp3: 'scrollUp3 10s linear infinite'
+        scrollUp3: 'scrollUp3 10s linear infinite',
+        backgroundColorCycle: 'backgroundColorCycle 15s linear infinite'
        }
     },
   }, 

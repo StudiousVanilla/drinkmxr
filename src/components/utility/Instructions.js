@@ -18,13 +18,23 @@ const Instructions = ({toggleInstructions}) => {
                 className="w-full flex flex-col flex-wrap h-2/3 justify-evenly items-evenly bg-white text-xl">
                         <div className="w-full flex justify-evenly items-center px-1 mb-2">
                             <p className="w-2/3 px-1 pb-5 border-b border-alcohol">
-                                Scroll to select each category
+                                1. Scroll the categories
                             </p>
                                 <div className="relative h-16 w-12">
-                                    <div className="absolute w-10 h-14 bg-extra"/>
-                                    <div className="absolute animate-scrollUp3 w-10 h-14 bg-mixer"/>
-                                    <div className="absolute animate-scrollUp2 w-10 h-14 bg-alcohol"/>
-                                    <div className="absolute animate-scrollUp1 w-10 h-14  bg-gray-700"/>
+                                    <div className="absolute w-10 h-14 flex justify-center items-center bg-extra">
+                                        <div className="w-5 h-5 rounded-full border border-white"/>
+                                    </div>
+                                    <div className="absolute animate-scrollUp3 w-10 h-14 flex justify-center items-center bg-mixer">
+                                        <div className="w-5 h-5 rounded-full border border-white"/>
+                                    </div>
+                                    <div className="absolute animate-scrollUp2 w-10 h-14 flex justify-center items-center bg-alcohol">
+                                        <div className="w-5 h-5 rounded-full border border-white"/>
+                                    </div>
+                                    <div className="absolute animate-scrollUp1 w-10 h-14 flex justify-center items-center  bg-gray-700">
+                                        <div className="w-6 h-6">
+                                            <img src={shaker} alt="Cocktail shaker" />
+                                        </div>
+                                    </div>
                                     <div className="absolute bottom-full w-16 h-20 right-1  bg-white"/>
                                     <div className="absolute w-10 h-14 border-4 border-black"/>
                                 </div>
@@ -32,11 +42,11 @@ const Instructions = ({toggleInstructions}) => {
 
                         <div className="w-full flex justify-evenly items-center px-1 mb-2">
                             <p className="w-2/3 px-1 pb-5 border-b border-mixer">
-                                Tap the arrow to return to the main page
+                                2. Add ingredients 
                             </p>
-                            <div className="p-3 bg-white rounded-full border-2 border-black">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                            <div className="p-1 rounded-lg animate-backgroundColorCycle">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-9 w-9 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                                 </svg>
                             </div>
                             
@@ -44,26 +54,19 @@ const Instructions = ({toggleInstructions}) => {
 
                         <div className="w-full flex justify-evenly items-center px-1">
                             <p className="w-2/3 px-1 pb-5 border-b border-extra">
-                                Press the shaker when you're ready to search
+                                3. Tap the Shaker
                             </p>
                             <div>
                                 <img src={shaker} alt="Cocktail shaker" className="animate-smallShaker" />
-                            </div>
-                            
+                            </div>          
                         </div>    
+                </div>
 
-                        <div className="w-full flex justify-evenly items-center px-1">
-                            <p className="w-2/3 px-1 ">
-                                Clear all your chosen ingredients
-                            </p>
-                            <div className="p-2 rounded-full bg-gray-700 text-white">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            
-                        </div>  
-
+                <div onClick={toggleInstructions}
+                className="h-20 flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>
                 </div>
 
 

@@ -288,11 +288,6 @@ const IngredientsData = () => {
     const toggleInstructions = ()=> {
         const instructions = document.querySelector('#Instructions')
         instructions.classList.toggle('slideInLeft')
-
-        const optionBackBtn = document.querySelector('#optionBackBtn')
-        const searchBtn = document.querySelector('#searchBtn')
-        optionBackBtn.classList.toggle('hide')
-        searchBtn.classList.toggle('hide')
     }
 
 
