@@ -111,7 +111,7 @@ code {
 }
 
 .ingredient-page-section{
-  @apply snap-end h-screen w-full flex flex-col justify-start
+  @apply snap-center h-screen w-full flex flex-col justify-start
 }
 
 .section-title{
