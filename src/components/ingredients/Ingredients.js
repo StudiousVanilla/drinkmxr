@@ -58,6 +58,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                     <div className="text-white text-xl -mt-6 h-44">
                         <p className="mb-3 font-light text-center">Your Shaker contains:</p>
                         <ul className="text-center">
+                            {chosenAlcohol.length > 0 &&
                             <li className="mb-2 w-60 pl-4 pr-2 py-1 rounded-full
                             text-black font-semibold
                             bg-alcohol">
@@ -69,6 +70,9 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                                     </svg>
                                 </button>
                             </li>
+                            }
+
+                            {chosenMixer.length > 0 &&
                             <li className="mb-2 w-60 pl-4 pr-2 py-1 rounded-full
                             text-black font-semibold
                             bg-mixer">
@@ -80,6 +84,9 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                                     </svg>        
                                 </button>
                             </li>
+                            }
+
+                            {chosenExtra.length > 0 &&
                             <li className="mb-2 w-60 pl-4 pr-2 py-1 rounded-full
                             text-black
                             bg-extra">
@@ -91,7 +98,8 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                                     </svg>
                                 </button>
-                            </li>
+                            </li>  
+                            }   
                         </ul>
                     </div>
                 }

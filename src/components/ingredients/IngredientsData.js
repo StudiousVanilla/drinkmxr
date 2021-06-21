@@ -7,7 +7,6 @@ import MixerOptions from './mixer/MixerOptions'
 import ExtraOptions from './extra/ExtraOptions'
 import DrinksData from '../drinks/DrinksData'
 import Warning from '../utility/Warning'
-import BottomBar from '../utility/BottomBar'
 
 
 
@@ -33,6 +32,11 @@ const IngredientsData = () => {
 
     const clearAlcohol = () =>{
         setChosenAlcohol([])
+        const ingredientGridItmes = document.getElementsByClassName('ingredientGridItem')
+
+        for (let i = 0; i < ingredientGridItmes.length; i++) {
+            ingredientGridItmes[i].classList.remove('alcoholAltColors')
+        }
     }
 
     const updateAlcoholStlye = (id) =>{
@@ -78,13 +82,10 @@ const IngredientsData = () => {
     const basicAlcohol = [
         'Amaretto',
         'Bourbon',
-        'Brandy',
         'Champagne',
         'Gin',
-        'Irish Whiskey',
         'Kahlua',
         'Rum',
-        'Sambuca',
         'Scotch',
         'Tequila',
         'Vodka'
@@ -110,6 +111,11 @@ const IngredientsData = () => {
 
     const clearMixer = () =>{
         setChosenMixer([])
+        const ingredientGridItmes = document.getElementsByClassName('ingredientGridItem')
+
+        for (let i = 0; i < ingredientGridItmes.length; i++) {
+            ingredientGridItmes[i].classList.remove('mixerAltColors')
+        }
     }
 
     const updateMixerStlye = (id) =>{
@@ -153,9 +159,6 @@ const IngredientsData = () => {
     };
 
     const basicMixer =[
-        'Apple Juice',
-        'Carbonated Water',
-        'Club Soda',
         'Coca-Cola',
         'Coffee',
         'Cranberry Juice',
@@ -188,6 +191,11 @@ const IngredientsData = () => {
 
     const clearExtra = () =>{
         setChosenExtra([])
+        const ingredientGridItmes = document.getElementsByClassName('ingredientGridItem')
+
+        for (let i = 0; i < ingredientGridItmes.length; i++) {
+            ingredientGridItmes[i].classList.remove('extraAltColors')
+        }
     }
 
     const updateExtraStlye = (id) =>{
@@ -231,14 +239,11 @@ const IngredientsData = () => {
     };
 
     const basicExtra =[
-        'Cherry',
-        'Cinnamon',
         'Egg White',
         'Honey',
         'Lemon',
         'Lime',
         'Mint',
-        'Nutmeg',
         'Orange',
         'Salt',
         'Strawberries',
@@ -389,9 +394,8 @@ const IngredientsData = () => {
                     toggleAlcohol={toggleAlcohol} 
                     toggleAlcoholOptions={toggleAlcoholOptions}
                     toggleAlcoholAuto={toggleAlcoholAuto}
+                    clearAlcohol={clearAlcohol}
                     chosenAlcohol={chosenAlcohol}
-                    chosenMixer={chosenMixer}
-                    chosenExtra={chosenExtra}
                     maintainOptionStyling={maintainOptionStyling}
                     />
 
@@ -400,9 +404,8 @@ const IngredientsData = () => {
                     toggleMixer={toggleMixer} 
                     toggleMixerOptions={toggleMixerOptions}
                     toggleMixerAuto={toggleMixerAuto}
-                    chosenAlcohol={chosenAlcohol}
+                    clearMixer={clearMixer}
                     chosenMixer={chosenMixer}
-                    chosenExtra={chosenExtra}
                     maintainOptionStyling={maintainOptionStyling}
                     />
 
@@ -411,8 +414,7 @@ const IngredientsData = () => {
                     toggleExtra={toggleExtra} 
                     toggleExtraOptions={toggleExtraOptions}
                     toggleExtraAuto={toggleExtraAuto}
-                    chosenAlcohol={chosenAlcohol}
-                    chosenMixer={chosenMixer}
+                    clearExtra={clearExtra}
                     chosenExtra={chosenExtra}
                     maintainOptionStyling={maintainOptionStyling}
                     />

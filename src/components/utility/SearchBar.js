@@ -24,8 +24,8 @@ const Searchbar = ({ingredient, items, toggleIngredientAuto, chosenIngredients})
   let placeholder = `Search ${ingredient}...`
 
   return ( 
-      <div className="w-screen p-4 mt-4 flex justify-start z-20">
-          <div className="w-full px-2 mb-8 z-20" onFocus={hideBottom} onBlur={hideBottom}>
+      <div className="w-screen px-4 py-0 mt-0 xs:py-2 xs:mt-2 flex justify-start z-30 bg-white">
+          <div className="w-full px-2 mb-44 z-20" onFocus={hideBottom} onBlur={hideBottom}>
               <ReactSearchAutocomplete
               items={items}
               onSelect={handleOnSelect}

@@ -92,24 +92,23 @@ code {
 }
 
 .ingredient-header{
-  @apply w-full flex justify-center text-2xl p-3 text-white mb-12
+  @apply w-full flex justify-center text-2xl p-3 text-white mb-3
 }
 
-.instructions-container{
-  @apply w-full flex flex-col flex-wrap h-48 justify-start items-start
+.ingredients-container{
+  @apply flex
 }
 
 .chosen-ingredient-container{
-  @apply flex justify-center items-center
+  @apply flex
 }
 
 .ingredient-remove-button{
-  @apply flex justify-between items-center
-  w-1/2 min-w-max rounded-2xl pl-2 pr-1 py-0.5
+  @apply flex
 }
 
 .quickSelect-container{
-  @apply pb-1 mx-5 mb-4 py-2  border-b w-max
+  @apply pb-1 mx-5 mb-2 py-1  border-b w-max
 }
 
 .quickSelect-text{
