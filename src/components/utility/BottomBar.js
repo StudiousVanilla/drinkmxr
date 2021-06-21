@@ -5,7 +5,7 @@ const BottomBar = ({toggleOptions}) => {
 
     return ( 
         <div id="BottomBar"
-        className="z-10 w-screen h-16 xs:h-28
+        className="z-10 w-screen h-16 xs:h-24 pb-1
         flex justify-center items-center border-t-2 border-black
         md:hidden bg-gray-100">
 
