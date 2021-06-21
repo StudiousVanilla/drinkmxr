@@ -34,7 +34,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
             <section className="snap-start bg-gray-800
             flex flex-col h-screen w-full justify-end items-center px-4" ref={shakerRef}>
 
-                <div className="h-2/6 flex justify-center items-center bg-none">
+                <div className="h-1/4 flex justify-center items-center bg-none">
                     <p className="text-5xl font-bold text-white">
                         Drink
                         <span className="text-alcohol">M</span>
