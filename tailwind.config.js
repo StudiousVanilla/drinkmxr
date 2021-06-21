@@ -12,7 +12,8 @@ module.exports = {
     },
     extend: {
       fontSize:{
-        'xs':'0.9rem'
+        'xs':'0.9rem',
+        'xxs':'0.6rem'
       },
       colors: {
         'alcohol': '#F87171', 

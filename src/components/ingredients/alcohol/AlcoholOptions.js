@@ -5,7 +5,7 @@ import Options from '../../utility/Options'
 
 
 
-const AlcoholOptions = ({basicAlcohol, toggleAlcohol, toggleAlcoholAuto,  chosenAlcohol, maintainOptionStyling}) => {
+const AlcoholOptions = ({basicAlcohol, toggleAlcohol, toggleAlcoholAuto,  chosenAlcohol, maintainOptionStyling, toggleAlcoholOptions}) => {
 
     useEffect(()=>{
         // 're-highlights' chosen ingrtedients from the previous search
@@ -76,7 +76,7 @@ const AlcoholOptions = ({basicAlcohol, toggleAlcohol, toggleAlcoholAuto,  chosen
 
                 <Options options={basicAlcohol} toggleIngredient={toggleAlcohol}/>
 
-
+                <div onClick={toggleAlcoholOptions}>back</div>
             </div>
         </div>
      );

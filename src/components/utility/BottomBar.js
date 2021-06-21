@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import shaker from '../../Icons/shaker.svg'
 
-const BottomBar = ({toggleOptions, chosenAlcohol, chosenMixer, chosenExtra}) => {
+const BottomBar = ({toggleOptions}) => {
 
     return ( 
         <div id="BottomBar"
-        className="fixed bottom-0 left-0 z-10 w-screen h-12
+        className="z-10 w-screen h-12 xs:h-16
         flex justify-center items-center border-t-2 border-black
         md:hidden bg-gray-100">
 
@@ -14,17 +14,20 @@ const BottomBar = ({toggleOptions, chosenAlcohol, chosenMixer, chosenExtra}) => 
 
                 <div id="bottomBtn"
                 className="rounded-full h-24 w-24 mb-14
+                xs:h-28 xs:w-28 xs:mb-28
                  flex justify-center items-center
                  border-4 border-black 
                  bg-white z-30">
                      <Link to="/drinks">
-                        <div
+                        <button
                         id="searchBtn" 
                         className="flex items-center animate-smallShaker">
                             <img src={shaker} alt="Cocktail Shaker" 
-                            className="w-16 h-16"/>
-                        </div>
+                            className="w-16 h-16 xs:w-20 xs:h-20"/>
+                        </button>
                     </Link>
+
+
                         <div 
                         onClick={toggleOptions}
                         id="optionBackBtn"
@@ -35,41 +38,8 @@ const BottomBar = ({toggleOptions, chosenAlcohol, chosenMixer, chosenExtra}) => 
                         </div>
                 </div> 
 
-
-                {chosenAlcohol.length > 0 &&
-                    <span className="absolute -top-2 z-30
-                    w-5 h-5
-                    flex justify-center items-center rounded-lg
-                    text-white font-bold text-sm
-                    bg-alcohol">
-                        {chosenAlcohol.length}
-                    </span>
-                }
-                {chosenMixer.length > 0 &&
-                    <span className="absolute left-0 z-30
-                    w-5 h-5
-                    flex justify-center items-center rounded-lg
-                    text-white font-bold text-sm
-                    bg-mixer">
-                        {chosenMixer.length}
-                    </span>
-                }
-                {chosenExtra.length > 0 &&
-                    <span className="absolute right-0 z-30
-                    w-5 h-5
-                    flex justify-center items-center rounded-lg
-                    text-white font-bold text-sm
-                    bg-extra">
-                        {chosenExtra.length}
-                    </span>
-                }  
-
+                <p className=" hidden xs:block absolute top-28 text-lg font-bold">Shake!</p>
             </div>
-
-
-                
-
-
         </div>
      );
 }

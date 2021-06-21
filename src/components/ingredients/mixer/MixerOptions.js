@@ -4,7 +4,7 @@ import Searchbar from '../../utility/SearchBar'
 import Options from '../../utility/Options'
 
 
-const MixerOptions = ({basicMixer, toggleMixer, toggleMixerAuto, chosenMixer, maintainOptionStyling}) => {
+const MixerOptions = ({basicMixer, toggleMixer, toggleMixerAuto, chosenMixer, maintainOptionStyling, toggleMixerOptions}) => {
 
     useEffect(()=>{
         // 're-highlights' chosen ingrtedients from the previous search
@@ -72,6 +72,8 @@ const MixerOptions = ({basicMixer, toggleMixer, toggleMixerAuto, chosenMixer, ma
                 
                 
                 <Options options={basicMixer} toggleIngredient={toggleMixer}/>
+
+                <button onClick={toggleMixerOptions}>back</button>
 
             </div>
         </div>

@@ -3,7 +3,7 @@ import Searchbar from '../../utility/SearchBar'
 import Options from '../../utility/Options'
 import extraAutoItems from './extraSearchAutoComplete'
 
-const ExtraOptions = ({basicExtra, toggleExtra, toggleExtraAuto, chosenExtra, maintainOptionStyling}) => {
+const ExtraOptions = ({basicExtra, toggleExtra, toggleExtraAuto, chosenExtra, maintainOptionStyling, toggleExtraOptions}) => {
 
     useEffect(()=>{
         // 're-highlights' chosen ingrtedients from the previous search
@@ -70,7 +70,8 @@ const ExtraOptions = ({basicExtra, toggleExtra, toggleExtraAuto, chosenExtra, ma
                 </div>
 
                 <Options options={basicExtra} toggleIngredient={toggleExtra}/>
-
+                
+                <button onClick={toggleExtraOptions}>back</button>
             </div>
         </div>
      );

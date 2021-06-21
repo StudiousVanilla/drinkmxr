@@ -31,6 +31,10 @@ const IngredientsData = () => {
         setChosenAlcohol(newChosenAlcohol)
     }
 
+    const clearAlcohol = () =>{
+        setChosenAlcohol([])
+    }
+
     const updateAlcoholStlye = (id) =>{
         // checks to see if id begins with a number (querySelector doesn't like numbers first). No number-first ingredients are in the quick select menu so no need to update style for them.
         if(id[0].match(/[0-9]/) === null){
@@ -102,6 +106,10 @@ const IngredientsData = () => {
     const removeMixer = (mixer) => {
         const newChosenMixer = chosenMixer.filter(item => item !== mixer)
         setChosenMixer(newChosenMixer)
+    }
+
+    const clearMixer = () =>{
+        setChosenMixer([])
     }
 
     const updateMixerStlye = (id) =>{
@@ -176,6 +184,10 @@ const IngredientsData = () => {
     const removeExtra = (extra) => {
         const newChosenExtra = chosenExtra.filter(item => item !== extra)
         setChosenExtra(newChosenExtra)
+    }
+
+    const clearExtra = () =>{
+        setChosenExtra([])
     }
 
     const updateExtraStlye = (id) =>{
@@ -363,6 +375,10 @@ const IngredientsData = () => {
                     toggleMixer={toggleMixer}
                     toggleExtra={toggleExtra} 
                     clearIngredients={clearIngredients}
+                    clearAlcohol={clearAlcohol}
+                    clearMixer={clearMixer}
+                    clearExtra={clearExtra}
+                    toggleOptions={toggleOptions}
                     />
 
                     <Instructions
@@ -400,11 +416,6 @@ const IngredientsData = () => {
                     chosenExtra={chosenExtra}
                     maintainOptionStyling={maintainOptionStyling}
                     />
-
-
-
-
-                    <BottomBar toggleOptions={toggleOptions} chosenAlcohol={chosenAlcohol} chosenMixer={chosenMixer} chosenExtra={chosenExtra}/>
                     
 
 

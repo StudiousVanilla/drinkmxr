@@ -36,7 +36,7 @@ code {
 }
 
 .ingredient-page-section{
-  @apply snap-start h-screen w-full flex flex-col justify-start pl-8 pt-8
+  @apply snap-start h-screen w-full flex flex-col justify-start
 }
 
 .section-title{
@@ -48,7 +48,10 @@ code {
 }
 
 .section-chosen-ingredients-list-item{
-  @apply mb-2 flex justify-between items-center px-1 pl-2 rounded-xl
+  @apply mb-2 
+  flex justify-between items-center
+  border border-white rounded-full
+  px-3 py-1
 }
 
 .section-arrow{
