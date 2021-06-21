@@ -110,7 +110,7 @@ code {
 }
 
 .ingredient-page-section{
-  @apply snap-center h-full w-full flex flex-col justify-start
+  @apply snap-start h-full w-full flex flex-col justify-start
 }
 
 .section-title{
