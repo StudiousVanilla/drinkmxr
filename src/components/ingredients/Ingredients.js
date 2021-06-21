@@ -32,7 +32,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
         h-screen w-full overflow-y-scroll overflow-x-hidden">
 
             <section className="snap-end bg-gray-800
-            flex flex-col h-screen w-full justify-end items-center px-4" ref={shakerRef}>
+            flex flex-col h-full w-full justify-end items-center px-4" ref={shakerRef}>
 
                 <div className="h-1/4 flex justify-center items-center bg-none">
                     <p className="text-5xl font-bold text-white">
