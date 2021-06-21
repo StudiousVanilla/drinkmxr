@@ -359,7 +359,7 @@ const IngredientsData = () => {
             <Switch>
                 <Route exact path='/'>
 
-                <div className="relative mx-auto w-screen h-screen overflow-x-hidden">
+                <div className="relative mx-auto w-full h-full overflow-x-hidden">
 
                     {/* warning that appears idf there are more than 3 ingredients selected */}
                     {(chosenAlcohol.length + chosenMixer.length+ chosenExtra.length) > 3 &&
