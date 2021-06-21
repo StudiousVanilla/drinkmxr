@@ -31,8 +31,8 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
         <div className="snap snap-y snap-mandatory
         h-screen w-full overflow-y-scroll overflow-x-hidden">
 
-            <section className="snap-start bg-gray-800
-            flex flex-col h-screen w-full justify-start items-center px-4 overflow-hidden" ref={shakerRef}>
+            <section className="snap-end bg-gray-800
+            flex flex-col h-screen w-full justify-end items-center px-4" ref={shakerRef}>
 
                 <div className="h-1/4 flex justify-center items-center bg-none">
                     <p className="text-5xl font-bold text-white">
@@ -123,7 +123,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                 </div>
 
                 {/* instructions */}
-                <div className="flex w-full text-white text-xl h-10 justify-end items-end mb-20">
+                <div className="flex w-full text-white text-xl h-10 justify-end items-end mb-6">
                     <button onClick={toggleInstructions}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
