@@ -44,7 +44,7 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
 
 
     return ( 
-        <div className="h-full">
+        <div className="h-full bg-gray-800">
 
 
             {/* container for loading animation */}
@@ -65,13 +65,16 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
             {drinks !== "No drinks" &&
 
 
-                <div className="flex flex-col justify-center items-center bg-gray-800">
+                <div className="flex flex-col justify-center items-center mb-20 bg-gray-800">
 
                     {drinks.map(drink=>
                         <DrinkListItem drink={drink} getDrink={getDrink} glasses={glasses}/>
                     )}
 
+                    <div className="w-full h-16"/>
+
                 </div>
+
 
 
             }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Drink from './Drink'
 
-const DrinkData = ({drink, toggleDrinkDisplay}) => {
+const DrinkData = ({drink, toggleDrinkDisplay, glasses}) => {
     
 
     // these state values will hold all non-null values taken from the ingredient and measures arrays in the drink object
@@ -24,9 +24,11 @@ const DrinkData = ({drink, toggleDrinkDisplay}) => {
         '0.75oz' :'20ml',
         '1oz' :'35ml',
         '11/3oz' :'40ml',
+        '11/3 oz' :'40ml',
         '11/2oz' :'40ml',
-        '11/2oz ' :'40ml',
+        '11/2 oz':'40ml', 
         '12/3oz' :'50ml',
+        '12/3 oz' :'50ml',
         '2oz' :'70ml',
         '2-3oz':'85ml',
         '3oz' :'100ml',
@@ -90,6 +92,9 @@ const DrinkData = ({drink, toggleDrinkDisplay}) => {
     '11/3oz',
     '11/2oz',
     '12/3oz',
+    '11/3 oz',
+    '11/2 oz',
+    '12/3 oz',
     '2oz',
     '2-3oz',
     '3oz',
@@ -145,13 +150,14 @@ const DrinkData = ({drink, toggleDrinkDisplay}) => {
 
         <Drink 
         name={drink.strDrink} 
-        glass={drink.strGlass} 
+        glass={drink.strGlass}
         measures={measures} 
         ingredients={ingredients} 
         instructions={drink.strInstructions} 
         toggleDrinkDisplay={toggleDrinkDisplay}
         conversions={conversions}
         conversionsArray={conversionsArray}
+        glasses={glasses}
         />
      );
 }

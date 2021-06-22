@@ -1,5 +1,4 @@
 
-
 const DrinkListItem = ({drink, getDrink, glasses}) => {
 
     const complexityChart = (number) =>{
@@ -79,9 +78,9 @@ const DrinkListItem = ({drink, getDrink, glasses}) => {
 
 
                 <div className="p-1 flex justify-start ml-1">
-                    <p className="flex items-center mt-1">
+                    <div className="flex items-center mt-1">
                         {complexityChart(drink.drinkInfo.numIngredients)}
-                    </p>
+                    </div>
                 </div>
             </div>
 

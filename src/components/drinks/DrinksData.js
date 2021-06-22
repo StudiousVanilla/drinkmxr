@@ -125,7 +125,7 @@ const DrinksData= ({searchQuery}) => {
         <div className="h-full bg-gray-800">
             <DrinksNav/>
             <DrinkList glasses={glasses} drinks={drinks} getDrink={getDrink} searchQuery={searchQuery}/>
-            <DrinkData  drink={drink} toggleDrinkDisplay={toggleDrinkDisplay}/>
+            <DrinkData  drink={drink} toggleDrinkDisplay={toggleDrinkDisplay} glasses={glasses}/>
         </div>
      );
 }
