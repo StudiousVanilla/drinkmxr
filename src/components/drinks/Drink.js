@@ -4,9 +4,8 @@ import DrinksNav from '../utility/DrinksNav'
 const Drink = ({name, glass, measures, ingredients, instructions, toggleDrinkDisplay, conversions, conversionsArray, glasses}) => {
 
 
-    // used to give ingredients and measures unique keys in the case of dupliacte values
-    let MeasureKeyNum = 0
-    let IngredientKeyNum = 0
+    // used to give ingredient divs unique keys in the case of dupliacte values adn to select the corresponding measure from the measure array
+    let IngredientKeyNum = -1
 
     const [tidyIngredients, setTidyIngredients] = useState([])
     const [tidyMeasures, setTidyMeasures] = useState([])
@@ -44,81 +43,49 @@ const Drink = ({name, glass, measures, ingredients, instructions, toggleDrinkDis
         ease-in duration-500 transform translate-x-0 bg-gray-800" 
         id="drinkDisplay">
 
-            <div className="w-screen overflow-scroll">
-                
+            <div className="w-screen overflow-scroll">               
                 <DrinksNav/>
-
-
                 {ingredients.length > 0 && 
                 <div>
-
                     <div className="mb-6 px-6 py-4 text-3xl text-center font-bold text-white">
                         <p>{name}</p>
                     </div>
-
-
                     <div className="w-36 h-36 xs:w-40 xs:h-40 mx-auto mb-4 flex justify-center items-center rounded-full
                     bg-white">
                         <img className="h-20 w-20 xs:h-24 xs:w-24"
                         src={glasses[glass]} alt={glass} />
                     </div>
-
-                    <div className="
+                    <div className="mb-5
                     text-center text-base font-light italic text-white">
                         <p>{glass}</p>
                     </div>
-
-
-
-
-
-
-                    <div className="w-full flex justify-center bg-gray-800 min-h-full pt-3">
-                        
+                    <div className="w-4/5 pt-3 flex flex-col justify-center items-center mx-auto bg-gray-800">
                         {/* ingredients */}
-                        <div className="flex flex-col justify-start items-center w-3/5 ">
-                            {tidyIngredients.map(ingredient=>{
-                                // used to give measures a unique key
-                                IngredientKeyNum++
-                                return(
-                                    <div
-                                    key={`ingredient - ${IngredientKeyNum}`}
-                                    className="h-16 flex justify-center items-center">
-                                        <p>{ingredient}</p>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                        
-                        {/* measures */}
-                        <div className="flex flex-col justify-start items-center w-2/5 ">
-                            {tidyMeasures.map(measure=>{
-                                // used to give measures a unique key
-                                MeasureKeyNum++
-                                return (
-                                <div key={`measure - ${MeasureKeyNum}`}
-                                className="h-16 flex justify-center items-center">
-                                    <p>{measure}</p>
+                        {tidyIngredients.map(ingredient=>{
+                            // used to give measures a unique key
+                            IngredientKeyNum++
+                            return(
+                                <div
+                                key={`ingredient - ${IngredientKeyNum}`}
+                                className="h-16 w-full mb-3  flex justify-between items-center rounded-lg bg-white">
+                                    <p className="font-bold px-5 text-left">{ingredient}</p>
+                                    <p className="px-5 font-semibold">{tidyMeasures[IngredientKeyNum]}</p>
                                 </div>)
-                                })
-                            }
-                            
-                        </div>
+                        })}
                     </div>
-                    <div className="my-3 p-3">
-                        <p>{instructions}</p>
+                    <div className="w-4/5 mx-auto mt-6 mb-16">
+                        <p className="mb-4 text-center text-white text-xl font-bold">Instructions</p>
+                        <p className="text-lg text-white">{instructions}</p>
                     </div>
                 </div>
                 }
-
-
-
-
-
-                <div onClick={toggleDrinkDisplay} className="m-5 ingredientBtn bg-mixer">
-                    back up
-                </div>
-                
+                <div onClick={toggleDrinkDisplay} 
+                className="h-12 mb-12 flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                    className="h-16 w-16 p-3 rounded-full border border-white text-white animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>
+                </div>  
             </div>
         </div>
      );

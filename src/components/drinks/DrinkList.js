@@ -75,8 +75,6 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
 
                 </div>
 
-
-
             }
 
 
@@ -129,6 +127,7 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
 
             </div>
             }
+
 
         </div>
      );
