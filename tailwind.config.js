@@ -14,6 +14,9 @@ module.exports = {
       height:{
         bot: '4.5rem'
       },
+      width:{
+        bot: '4.5rem'
+      },
       fontSize:{
         'xs':'0.9rem',
         'xxs':'0.6rem',
