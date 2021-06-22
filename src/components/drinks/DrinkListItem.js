@@ -71,14 +71,14 @@ const DrinkListItem = ({drink, getDrink, glasses}) => {
 
 
 
-                <div className="h-12 p-1 flex items-center font-bold 
+                <div className="h-12 p-1 flex items-center justify-center font-bold 
                 text-md xs:text-lg">
                     <p>{drink.strDrink}</p>
                 </div>
 
 
 
-                <div className="p-1 mr-4 flex justify-start">
+                <div className="p-1 flex justify-center">
                     <p className="flex items-center mt-1">
                         {complexityChart(drink.drinkInfo.numIngredients)}
                     </p>
