@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import {ingredientsSearch, drinkSearch} from '../../GraphQL'
 import DrinkList from './DrinkList'
 import DrinkData from './DrinkData'
+import DrinksNav from "../utility/DrinksNav";
 import { balloon, beer, cocktail, coffee, collins, coup, flute, highball, hurricane, jar, martini, mug, NnN, pint, pitcher, punch, shot, snifter, wine, whiskey } from "../utility/Glasses";
+
 
 const DrinksData= ({searchQuery}) => {
 
@@ -120,7 +122,8 @@ const DrinksData= ({searchQuery}) => {
 
 
     return ( 
-        <div className="h-full">
+        <div className="h-full bg-gray-800">
+            <DrinksNav/>
             <DrinkList glasses={glasses} drinks={drinks} getDrink={getDrink} searchQuery={searchQuery}/>
             <DrinkData  drink={drink} toggleDrinkDisplay={toggleDrinkDisplay}/>
         </div>

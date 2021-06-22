@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import shaker from '../../Icons/shaker.svg'
+import DrinkListItem from "./DrinkListItem";
 
 const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
 
@@ -22,6 +23,10 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
     // checks to see if the drinks prop has been populated with data fetched from api, and when it has the waiting naimation is removed 
 
     
+
+
+
+
     useEffect(()=>{
         const checkDataRecieved = () =>{
                 if(drinks.length > 0){
@@ -32,6 +37,11 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
         }
         checkDataRecieved()
     }, [drinks])
+
+
+
+
+
 
     return ( 
         <div className="h-full">
@@ -50,41 +60,31 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
                 </div>
             </div>
             
-            <button className="m-5 ingredientBtn bg-alcohol">
-                <Link to='/'>
-                    back
-                </Link>
-            </button>
+
 
             {drinks !== "No drinks" &&
-                <div className=" flex flex-col justify-center items-center
-                bg-gray-700">
+
+
+                <div className="flex flex-col justify-center items-center bg-gray-800">
 
                     {drinks.map(drink=>
+                        <DrinkListItem drink={drink} getDrink={getDrink} glasses={glasses}/>
+                    )}
 
-                    <div key={drink.idDrink} 
-                    className="flex flex-col items-center w-3/4 my-4 py-2 bg-gray-100 rounded-md border-4">
-
-                        <div onClick={()=>getDrink(drink.idDrink)}
-                        className="w-full flex justify-start py-2 pl-2 text-xl font-bold">
-                            <p>{drink.strDrink}</p>
-                        </div>
-                        <div className="w-full flex">
-                            <div className="w-3/5 flex flex-col justify-center items-center">
-                                <p>complexity:</p>
-                                <p>{drink.drinkInfo.numIngredients}</p>
-                            </div>
-                            <div className="flex justify-center items-end w-2/5">
-                                <img className="w-12 h-12"
-                                src={glasses[drink.drinkInfo.strGlass]} alt={drink.drinkInfo.strGlass} />
-                            </div>
-                        </div>
-                    </div>    
-
-                        
-                        )}
                 </div>
+
+
             }
+
+
+
+
+
+
+
+
+
+
 
             {drinks === "No drinks" && 
             <div>

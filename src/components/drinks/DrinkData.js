@@ -25,6 +25,7 @@ const DrinkData = ({drink, toggleDrinkDisplay}) => {
         '1oz' :'35ml',
         '11/3oz' :'40ml',
         '11/2oz' :'40ml',
+        '11/2oz ' :'40ml',
         '12/3oz' :'50ml',
         '2oz' :'70ml',
         '3oz' :'100ml',

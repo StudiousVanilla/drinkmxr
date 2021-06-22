@@ -144,9 +144,8 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
 
             <section className="ingredient-page-section bg-alcohol" ref={alcoholRef}>
 
-                <div className="h-3/5 flex justify-center items-end"
-                    onClick={toggleAlcoholOptions}>
-                    <button className="h-60 w-60 xs:w-72 xs:h-72 rounded-full border text-white border-white flex flex-col justify-center items-center">
+                <div onClick={toggleAlcoholOptions} className="h-3/5 flex justify-center items-end">
+                    <button className="h-60 w-60 xs:w-72 xs:h-72 rounded-full border text-white border-white flex flex-col justify-center items-center focus:outline-none focus:ring focus:border-blue-300 noSelect">
                         <p className="text-lg mb-1">Choose your</p>
                         <p className="text-5xl">Alcohol</p>
                     </button>
@@ -213,7 +212,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
 
                 <div className="h-3/5 flex justify-center items-end"
                     onClick={toggleMixerOptions}>
-                    <button className="h-60 w-60 xs:w-72 xs:h-72 rounded-full border text-white border-white flex flex-col justify-center items-center">
+                    <button className="h-60 w-60 xs:w-72 xs:h-72 rounded-full border text-white border-white flex flex-col justify-center items-center focus:outline-none focus:ring focus:border-blue-300 noSelect">
                         <p className="text-lg mb-1">Choose your</p>
                         <p className="text-5xl">Mixer</p>
                     </button>
@@ -278,7 +277,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
 
                 <div className="h-3/5 flex justify-center items-end"
                     onClick={toggleExtraOptions}>
-                    <button className="h-60 w-60 xs:w-72 xs:h-72 rounded-full border text-white border-white flex flex-col justify-center items-center">
+                    <button className="h-60 w-60 xs:w-72 xs:h-72 rounded-full border text-white border-white flex flex-col justify-center items-center focus:outline-none focus:ring focus:border-blue-300 noSelect">
                         <p className="text-lg mb-1">Choose your</p>
                         <p className="text-5xl">Extras</p>
                     </button>

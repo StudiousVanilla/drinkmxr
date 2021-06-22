@@ -8,7 +8,7 @@ const Instructions = ({toggleInstructions}) => {
         <div className="optionsContainer w-screen" id="Instructions">
 
 
-            <div className="relative h-full text-xl">
+            <div className="relative h-full w-full text-xl">
 
                 <header className="w-full flex justify-center text-2xl p-3 mb-4 text-black font-bold">
                     Instructions
@@ -64,7 +64,8 @@ const Instructions = ({toggleInstructions}) => {
 
                 <div onClick={toggleInstructions}
                 className="h-20 flex justify-center items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                    className="h-16 w-16 p-4 border border-black rounded-full animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
                     </svg>
                 </div>
