@@ -28,9 +28,9 @@ const DrinkListItem = ({drink, getDrink, glasses}) => {
         if(number <= 5){
             return(
                 <div className="flex justify-center items-end">
-                    <div className="h-3 w-3 mr-2 rounded-full bg-purple-700"/>
-                    <div className="h-3 w-3 mr-2 rounded-full bg-purple-700"/>
-                    <div className="h-3 w-3 mr-2 rounded-full bg-purple-700"/>
+                    <div className="h-3 w-3 mr-2 rounded-full bg-purple-500"/>
+                    <div className="h-3 w-3 mr-2 rounded-full bg-purple-500"/>
+                    <div className="h-3 w-3 mr-2 rounded-full bg-purple-500"/>
                     <div className="h-3 w-3 mr-2 rounded-full bg-gray-300"/>
                     <div className="h-3 w-3 mr-2 rounded-full bg-gray-300"/>
                 </div>
@@ -89,7 +89,7 @@ const DrinkListItem = ({drink, getDrink, glasses}) => {
 
             {/* right side */}
             <div className="h-full w-1/3 flex justify-center items-center">
-                <img className="w-16 h-16 p-3 border border-black rounded-full"
+                <img className="w-16 h-16 p-2 xs:w-20 xs:h-20 xs:p-3 border border-black rounded-full"
                 src={glasses[drink.drinkInfo.strGlass]} alt={drink.drinkInfo.strGlass} />
             </div>
 
