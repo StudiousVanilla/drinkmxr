@@ -19,8 +19,7 @@ const AlcoholOptions = ({basicAlcohol, toggleAlcohol, toggleAlcoholAuto,  chosen
         <div className="optionsContainer" id="AlcoholOptions">
 
 
-            <div className="relative h-auto">
-
+            <div className="relative h-full flex flex-col justify-between">
                 <header className="ingredient-header bg-alcohol">
                     Alcohol
                 </header>
@@ -62,7 +61,6 @@ const AlcoholOptions = ({basicAlcohol, toggleAlcohol, toggleAlcoholAuto,  chosen
                     </div>
                 </div>
                 }
-
                 
                 <div className="quickSelect-container border-alcohol">
                     <p className="quickSelect-text text-alcohol">
@@ -70,11 +68,9 @@ const AlcoholOptions = ({basicAlcohol, toggleAlcohol, toggleAlcoholAuto,  chosen
                     </p>
                 </div>
 
-
                 <Options options={basicAlcohol} toggleIngredient={toggleAlcohol}/>
                 
-                <Searchbar items={alcoholAutoItems} ingredient={'alcohol'} toggleIngredientAuto={toggleAlcoholAuto} chosenIngredients={chosenAlcohol}/>
-
+                <Searchbar items={alcoholAutoItems} ingredient={'alcohol'} toggleIngredientAuto={toggleAlcoholAuto}/>
 
                 <AddToShaker chosenIngredient={chosenAlcohol} backgroundColor={'alcohol'} toggleOptions={toggleAlcoholOptions}/>
                 

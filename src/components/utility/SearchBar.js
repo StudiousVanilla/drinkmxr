@@ -1,6 +1,6 @@
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
-const Searchbar = ({ingredient, items, toggleIngredientAuto, chosenIngredients}) => {
+const Searchbar = ({ingredient, items, toggleIngredientAuto}) => {
 
   // resets search bar alue to ''
   const resetValue = () =>{
@@ -9,23 +9,26 @@ const Searchbar = ({ingredient, items, toggleIngredientAuto, chosenIngredients})
 
   }
 
-  const hideBottom = () =>{
-    const bottomBar = document.querySelector('#BottomBar')
+  // uses ingredient name passed from each fo the three categories to grab the correct elements
+  const hideBottom = (ingredient) =>{
+    const bottomBar = document.querySelector(`#addShaker${ingredient}`)
     bottomBar.classList.toggle('hidden')
+
+    const searchBar = document.querySelector(`#searchBar${ingredient}`)
+    searchBar.classList.toggle('mb-44')
   }
 
+  // adds ingredient to relevant chosenIngredient array
   const handleOnSelect = (item) => {
-    console.log(item)
     toggleIngredientAuto(item.name)
   }
 
-  
-
-  let placeholder = `Search ${ingredient}...`
+  // placeholder for searc bar input
+  let placeholder = `Search ${ingredient}s...`
 
   return ( 
       <div className="w-screen px-4 py-0 mt-0 xs:py-2 xs:mt-2 flex justify-start z-30 bg-white">
-          <div className="w-full px-2 mb-44 z-20" onFocus={hideBottom} onBlur={hideBottom}>
+          <div className="w-full px-2 mb-6 z-20" id={`searchBar${ingredient}`} onFocus={()=>hideBottom(ingredient)} onBlur={()=>hideBottom(ingredient)}>
               <ReactSearchAutocomplete
               items={items}
               onSelect={handleOnSelect}

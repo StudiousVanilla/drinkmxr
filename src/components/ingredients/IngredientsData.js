@@ -290,8 +290,6 @@ const IngredientsData = () => {
         instructions.classList.toggle('slideInLeft')
     }
 
-
-
     // search query
 
     

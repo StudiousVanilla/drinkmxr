@@ -25,11 +25,9 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
         }
     }
 
-
-
     return (
         <div className="snap snap-y snap-mandatory
-        h-full w-full overflow-y-scroll fixed top-0 left-0">
+        h-full w-full overflow-y-scroll fixed top-0 left-0" id="main-container">
 
             <section className="snap-end bg-gray-800
             flex flex-col h-full w-full justify-end items-center px-4" ref={shakerRef}>
