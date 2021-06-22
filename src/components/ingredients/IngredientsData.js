@@ -72,11 +72,6 @@ const IngredientsData = () => {
     const toggleAlcoholOptions = () =>{
         const alcoholOptions = document.querySelector('#AlcoholOptions')
         alcoholOptions.classList.toggle('slideInLeft')
-
-        const optionBackBtn = document.querySelector('#optionBackBtn')
-        const searchBtn = document.querySelector('#searchBtn')
-        optionBackBtn.classList.toggle('hide')
-        searchBtn.classList.toggle('hide')
     }
 
     const basicAlcohol = [
@@ -142,11 +137,6 @@ const IngredientsData = () => {
     const toggleMixerOptions = () =>{
         const mixerOptions = document.querySelector('#MixerOptions')
         mixerOptions.classList.toggle('slideInLeft')
-
-        const optionBackBtn = document.querySelector('#optionBackBtn')
-        const searchBtn = document.querySelector('#searchBtn')
-        optionBackBtn.classList.toggle('hide')
-        searchBtn.classList.toggle('hide')
     }
 
     const toggleMixerAuto = (mixer) => {
@@ -223,10 +213,6 @@ const IngredientsData = () => {
         const extraOptions = document.querySelector('#ExtraOptions')
         extraOptions.classList.toggle('slideInLeft')
 
-        const optionBackBtn = document.querySelector('#optionBackBtn')
-        const searchBtn = document.querySelector('#searchBtn')
-        optionBackBtn.classList.toggle('hide')
-        searchBtn.classList.toggle('hide')
     }
 
     const toggleExtraAuto = (extra) => {
@@ -277,11 +263,6 @@ const IngredientsData = () => {
         mixerOptions.classList.remove('slideInLeft')
         extraOptions.classList.remove('slideInLeft')
         instructions.classList.remove('slideInLeft')
-
-        const optionBackBtn = document.querySelector('#optionBackBtn')
-        const searchBtn = document.querySelector('#searchBtn')
-        optionBackBtn.classList.toggle('hide')
-        searchBtn.classList.toggle('hide')
 
     }
 

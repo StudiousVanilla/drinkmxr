@@ -16,7 +16,8 @@ module.exports = {
       },
       fontSize:{
         'xs':'0.9rem',
-        'xxs':'0.6rem'
+        'xxs':'0.6rem',
+        'md': '1.05rem'
       },
       colors: {
         'alcohol': '#F87171', 

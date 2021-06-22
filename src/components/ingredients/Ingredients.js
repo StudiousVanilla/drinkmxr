@@ -53,17 +53,17 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                 }
 
                 {(chosenAlcohol.length + chosenMixer.length + chosenExtra.length) > 0 &&
-                    <div className="text-white text-xl -mt-6 h-44">
+                    <div className="text-white text-md xs:text-lg -mt-6 h-44">
                         <p className="mb-3 font-light text-center">Your Shaker contains:</p>
                         <ul className="text-center">
                             {chosenAlcohol.length > 0 &&
-                            <li className="mb-2 w-60 pl-4 pr-2 py-1 rounded-full
+                            <li className="mb-2 pl-1 pr-2 py-1 xs:pl-4 xs:pr-2 xs:py-1 rounded-full
                             text-black font-semibold
                             bg-alcohol">
                                 <button onClick={clearAlcohol} 
                                 className="w-full flex items-center justify-between font-semibold">
                                     {shakerString(chosenAlcohol)}
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white mt-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-4 text-white mt-1" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                                     </svg>
                                 </button>
@@ -71,13 +71,13 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                             }
 
                             {chosenMixer.length > 0 &&
-                            <li className="mb-2 w-60 pl-4 pr-2 py-1 rounded-full
+                            <li className="mb-2 pl-4 pr-2 py-1 rounded-full
                             text-black font-semibold
                             bg-mixer">
                                 <button onClick={clearMixer} 
                                 className="w-full flex items-center justify-between font-semibold">
                                     {shakerString(chosenMixer)}
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white mt-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-4 text-white mt-1" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                                     </svg>        
                                 </button>
@@ -85,14 +85,14 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                             }
 
                             {chosenExtra.length > 0 &&
-                            <li className="mb-2 w-60 pl-4 pr-2 py-1 rounded-full
+                            <li className="mb-2 pl-4 pr-2 py-1 rounded-full
                             text-black
                             bg-extra">
                                 <button onClick={clearExtra} 
                                 className="w-full flex items-center justify-between font-semibold">
                                     {shakerString(chosenExtra)}
                                     <svg xmlns="http://www.w3.org/2000/svg" 
-                                    className="h-4 w-4 text-white mt-1" viewBox="0 0 20 20" fill="currentColor">
+                                    className="h-4 w-4 ml-4 text-white mt-1" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                                     </svg>
                                 </button>
@@ -135,7 +135,10 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                     </div>
                 </div>
 
-                <BottomBar toggleOptions={toggleOptions} chosenAlcohol={chosenAlcohol} chosenMixer={chosenMixer} chosenExtra={chosenExtra} />
+                {(chosenAlcohol.length+chosenMixer.length+chosenExtra.length) > 0 &&
+                    <BottomBar toggleOptions={toggleOptions} chosenAlcohol={chosenAlcohol} chosenMixer={chosenMixer} chosenExtra={chosenExtra} />
+                }
+
 
             </section>
 
@@ -162,8 +165,9 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                                 <button
                                     onClick={() => toggleAlcohol(ingredient)}
                                     key={ingredient}
-                                    className="section-chosen-ingredients-list-item
-                                    w-40 bg-white">
+                                    className="
+                                    section-chosen-ingredients-list-item
+                                     bg-white">
                                     {ingredient}
                                     <div className="delete-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
@@ -183,7 +187,6 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                             <button
                                 onClick={clearAlcohol}
                                 className="section-chosen-ingredients-list-item
-                                w-56
                                 bg-white">
                                 {chosenAlcohol[0]} & {chosenAlcohol.length - 1} others
                                 <div className="delete-icon">
@@ -230,7 +233,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                                     onClick={() => toggleMixer(ingredient)}
                                     key={ingredient}
                                     className="section-chosen-ingredients-list-item
-                                    w-40 bg-white">
+                                    bg-white">
                                     {ingredient}
                                     <div className="delete-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
@@ -249,7 +252,6 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                             <button
                                 onClick={clearMixer}
                                 className="section-chosen-ingredients-list-item
-                                w-56
                                 bg-white">
                                 {chosenMixer[0]} & {chosenMixer.length - 1} others
                                 <div className="delete-icon">
@@ -296,7 +298,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                                     onClick={() => toggleExtra(ingredient)}
                                     key={ingredient}
                                     className="section-chosen-ingredients-list-item
-                                    w-40 bg-white">
+                                    bg-white">
                                     {ingredient}
                                     <div className="delete-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
@@ -316,7 +318,6 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                             <button
                                 onClick={clearExtra}
                                 className="section-chosen-ingredients-list-item
-                                w-56
                                 bg-white">
                                 {chosenExtra[0]} & {chosenExtra.length - 1} others
                                 <div className="delete-icon">
