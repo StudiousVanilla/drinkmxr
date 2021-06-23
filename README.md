@@ -2,6 +2,7 @@ TODO:
 - No drinks page
 - README
 - Comments check
+- Desktop
 - Heroku dyno
 
 
