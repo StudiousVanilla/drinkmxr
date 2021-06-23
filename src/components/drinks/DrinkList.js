@@ -21,12 +21,6 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
 
 
     // checks to see if the drinks prop has been populated with data fetched from api, and when it has the waiting naimation is removed 
-
-    
-
-
-
-
     useEffect(()=>{
         const checkDataRecieved = () =>{
                 if(drinks.length > 0){
@@ -92,7 +86,8 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
                         <div key={string}
                         className="h-12 xs:h-16 w-full mb-3  flex justify-between items-center rounded-lg bg-white">
                             <p className="font-bold px-5 text-left text-xl">
-                                {string}
+                                {/* replaces - with ' ' */}
+                                {string.replace(/_/g, ' ')}
                             </p>
                         </div>
                         )}
