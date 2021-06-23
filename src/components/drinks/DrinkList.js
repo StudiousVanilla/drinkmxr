@@ -27,16 +27,16 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
 
 
 
-    // useEffect(()=>{
-    //     const checkDataRecieved = () =>{
-    //             if(drinks.length > 0){
-    //                 setTimeout(()=>{
-    //                     AnimationOff()
-    //                 }, [1000])
-    //             }
-    //     }
-    //     checkDataRecieved()
-    // }, [drinks])
+    useEffect(()=>{
+        const checkDataRecieved = () =>{
+                if(drinks.length > 0){
+                    setTimeout(()=>{
+                        AnimationOff()
+                    }, [1000])
+                }
+        }
+        checkDataRecieved()
+    }, [drinks])
 
 
 
@@ -49,7 +49,7 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
 
             {/* container for loading animation */}
 
-            {/* <div className="
+            <div className="
             fixed top-0 right-0 h-screen w-screen bg-blue-400
             flex justify-center items-center" id="animationContainer">
                 <div className="
@@ -58,7 +58,7 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
                     <img src={shaker} alt="Cocktail shaker"
                     className="w-4/5 rounded-full p-5 animate-shaker" />
                 </div>
-            </div> */}
+            </div>
             
 
 
