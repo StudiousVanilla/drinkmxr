@@ -51,7 +51,7 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
 
             <div className="
             fixed top-0 right-0 h-screen w-screen bg-blue-400
-            flex justify-center items-center" id="animationContainer">
+            flex justify-center items-center z-20" id="animationContainer">
                 <div className="
                 relative w-full h-1/3
                 flex justify-center items-center">
@@ -99,13 +99,13 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
                     
                         {/* hints for users based on number of ingredients */}
                         {queryArray.length > 3 &&
-                        <div className="pt4 xs:pt-8 text-xl text-white">
+                        <div className="pt-2 mb-2 xs:pt-4 text-xl text-white">
                             <p>Try using fewer ingredients</p>
                         </div>
                         }
                         {/* hints for users based on number of ingredients */}
                         {queryArray.length <= 3 &&
-                        <div className="pt-8 text-xl text-white">
+                        <div className="pt-2 mb-2 text-xl text-white">
                             <p>Try using different ingredients</p>
                         </div>
                         }
@@ -120,9 +120,9 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
                 }
 
 
-                <div className="w-full my-7 flex justify-center bg-gray-800">
+                <div className="w-full pb-4 sm:my-7 flex justify-center bg-gray-800">
                         <Link to="/">
-                            <button className="border border-white p-5 rounded-full animate-pulse">
+                            <button className="relative border border-white p-5 rounded-full animate-pulse z-10">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
                                 </svg>

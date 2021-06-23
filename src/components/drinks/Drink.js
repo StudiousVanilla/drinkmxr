@@ -44,7 +44,7 @@ const Drink = ({name, glass, measures, ingredients, instructions, toggleDrinkDis
         id="drinkDisplay">
 
             <div className="w-screen 
-            sm:w-3/4 sm:p-6 sm:bg-gray-900 sm:rounded-lg overflow-x-hidden
+            sm:w-3/4 sm:p-6 sm:bg-gray-800 sm:rounded-lg overflow-x-hidden
             scrollbar scrollbar-thumb-gray-300 scrollbar-track-gray-900">
                 <div className="sm:hidden">
                     <DrinksNav/>
@@ -63,7 +63,7 @@ const Drink = ({name, glass, measures, ingredients, instructions, toggleDrinkDis
                     text-center text-base font-light italic sm:mb-3 text-white">
                         <p>{glass}</p>
                     </div>
-                    <div className="w-4/5 pt-3 flex flex-col justify-center items-center mx-auto bg-gray-900 sm:pt-0">
+                    <div className="w-4/5 pt-3 flex flex-col justify-center items-center mx-auto bg-gray-800 sm:pt-0">
                         {/* ingredients */}
                         {tidyIngredients.map(ingredient=>{
                             // used to give measures a unique key
