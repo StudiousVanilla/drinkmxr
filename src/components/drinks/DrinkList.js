@@ -44,7 +44,7 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
 
 
     return ( 
-        <div className="h-full bg-gray-800">
+        <div className="h-full bg-gray-800 ">
 
 
             {/* container for loading animation */}
@@ -56,7 +56,7 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
                 relative w-full h-1/3
                 flex justify-center items-center">
                     <img src={shaker} alt="Cocktail shaker"
-                    className="w-4/5 rounded-full p-5 animate-shaker" />
+                    className="w-4/5 sm:w-2/5 md:w-1/3 lg:w-1/4 rounded-full p-5 animate-shaker" />
                 </div>
             </div>
             
@@ -65,7 +65,7 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
             {drinks !== "No drinks" &&
 
 
-                <div className="flex flex-col justify-center items-center mb-20 bg-gray-800">
+                <div className="flex flex-col justify-center items-center mb-20 bg-gray-800 sm:w-1/2 sm:items-center">
 
                     {drinks.map(drink=>
                         <DrinkListItem drink={drink} getDrink={getDrink} glasses={glasses}/>
@@ -87,7 +87,7 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
                         Didn't find any drinks with:
                     </p>
                     
-                    <div className="w-4/5 pt-3 flex flex-col justify-center items-center mx-auto bg-gray-800">
+                    <div className="w-4/5 pt-3 flex flex-col justify-center items-center mx-auto bg-gray-800 sm:w-2/5 md:w-1/3 lg:w-1/4">
                         {queryArray.map(string=>
                         <div key={string}
                         className="h-12 xs:h-16 w-full mb-3  flex justify-between items-center rounded-lg bg-white">
@@ -121,13 +121,13 @@ const DrinkList = ({drinks, getDrink, glasses, searchQuery}) => {
 
 
                 <div className="w-full my-7 flex justify-center bg-gray-800">
-                    <button className="border border-white p-5 rounded-full animate-pulse">
                         <Link to="/">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
-                            </svg>
+                            <button className="border border-white p-5 rounded-full animate-pulse">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                                </svg>
+                            </button>
                         </Link>
-                    </button>
                 </div>
             </div>
             }

@@ -6,8 +6,7 @@ const BottomBar = ({toggleOptions}) => {
     return ( 
         <div id="BottomBar"
         className="z-10 w-screen h-16 xs:h-bot pb-1
-        flex justify-center items-center border-t-2 border-black
-        md:hidden bg-gray-100">
+        flex justify-center items-center border-t-2 border-black bg-gray-100 sm:w-0 sm:my-4 sm:bg-gray-800 sm:text-white sm:border-white">
 
             
             <div className="relative flex justify-center items-center">
@@ -17,7 +16,7 @@ const BottomBar = ({toggleOptions}) => {
                 xs:h-24 xs:w-24 xs:mb-20
                  flex justify-center items-center
                  border-4 border-black 
-                 bg-white z-30">
+                 bg-white z-30 sm:border-white">
                      <Link to="/drinks">
                         <button
                         id="searchBtn" 

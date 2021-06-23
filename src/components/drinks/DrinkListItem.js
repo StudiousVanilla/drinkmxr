@@ -63,7 +63,7 @@ const DrinkListItem = ({drink, getDrink, glasses}) => {
 
         <div key={drink.idDrink} onClick={()=>getDrink(drink.idDrink)}
         className=" w-5/6 my-3 h-24
-        flex items-center bg-gray-100 rounded-md border-4">
+        flex items-center bg-gray-100 rounded-md border-4 sm:w-3/4 md:w-3/4 lg:w-3/4">
 
             {/* left side */}
             <div className="w-2/3 pl-1">

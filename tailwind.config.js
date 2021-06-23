@@ -17,6 +17,9 @@ module.exports = {
       width:{
         bot: '4.5rem'
       },
+      left:{
+        halffull: '10%'
+      },
       fontSize:{
         'xs':'0.9rem',
         'xxs':'0.6rem',
@@ -102,7 +105,12 @@ module.exports = {
     },
   }, 
   variants: {
+    scrollSnapType : ['responsive'],
+    scrollbar: ['responsive'],   
     extend: {},
   },
-  plugins: [require('tailwindcss-scroll-snap')],
+  plugins: [
+    require('tailwindcss-scroll-snap'),
+    require('tailwind-scrollbar')
+  ],
 }

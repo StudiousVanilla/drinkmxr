@@ -340,7 +340,6 @@ const IngredientsData = () => {
                         <Warning/>
                     }
 
-
                     <Ingredients 
                     toggleAlcoholOptions={toggleAlcoholOptions}
                     toggleMixerOptions={toggleMixerOptions}
@@ -393,16 +392,12 @@ const IngredientsData = () => {
                     maintainOptionStyling={maintainOptionStyling}
                     />
                     
-
-
-
-
                 </div>
                 
                 </Route>
 
                 <Route exact path='/drinks'>
-                        <div className="relative mx-auto w-screen h-screen overflow-x-hidden">
+                        <div className="relative mx-auto w-screen h-screen overflow-x-hidden bg-gray-800 sm:scrollbar sm:scrollbar-thumb-gray-300 sm:scrollbar-track-gray-800">
                             <DrinksData searchQuery={searchQuery}/>
                         </div>
                 </Route>

@@ -27,8 +27,8 @@ const Searchbar = ({ingredient, items, toggleIngredientAuto}) => {
   let placeholder = `Search ${ingredient}s...`
 
   return ( 
-      <div className="w-screen px-4 py-0 mt-0 xs:py-2 xs:mt-2 flex justify-start z-30 bg-white">
-          <div className="w-full px-2 mb-6 z-20" id={`searchBar${ingredient}`} onFocus={()=>hideBottom(ingredient)} onBlur={()=>hideBottom(ingredient)}>
+      <div className="w-screen px-4 py-0 mt-0 xs:py-2 xs:mt-2 flex justify-start z-30 bg-white sm:justify-center">
+          <div className="w-full px-2 mb-6 z-20 sm:w-1/2 md:w-1/3" id={`searchBar${ingredient}`} onFocus={()=>hideBottom(ingredient)} onBlur={()=>hideBottom(ingredient)}>
               <ReactSearchAutocomplete
               items={items}
               onSelect={handleOnSelect}

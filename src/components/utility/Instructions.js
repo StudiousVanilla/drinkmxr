@@ -5,10 +5,10 @@ const Instructions = ({toggleInstructions}) => {
 
 
     return ( 
-        <div className="optionsContainer w-screen" id="Instructions">
+        <div className="optionsContainer w-screen sm:flex sm:justify-center" id="Instructions">
 
 
-            <div className="relative h-full w-full text-xl">
+            <div className="relative h-full w-full sm:w-1/2 text-xl">
 
                 <header className="w-full flex justify-center text-2xl p-3 mb-4 text-black font-bold">
                     Instructions

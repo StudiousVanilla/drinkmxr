@@ -26,8 +26,8 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
     }
 
     return (
-        <div className="snap snap-y snap-mandatory
-        h-full w-full overflow-y-scroll fixed top-0 left-0" id="main-container">
+        <div className="snap snap-y sm:snap-x snap-mandatory 
+        h-full w-full overflow-y-scroll fixed top-0 left-0 sm:scrollbar sm:scrollbar-thumb-gray-300 sm:scrollbar-track-gray-800" id="main-container">
 
             <section className="snap-end bg-gray-800
             flex flex-col h-full w-full justify-end items-center px-4" ref={shakerRef}>
@@ -105,17 +105,17 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
 
                 <div className="w-full h-1/3 xs:h-1/2 flex justify-start items-center">
                     <div className="h-3/4 w-full flex justify-evenly items-center">
-                        <button className="h-20 w-20 xs:h-24 xs:w-24 rounded-md bg-alcohol" onClick={alcoholScroll}>
-                            <p className="text-xxs">Add</p>
-                            <p className="text-lg xs:text-xl font-semibold">Alcohol</p>
+                        <button className="h-20 w-20 xs:h-24 xs:w-24 sm:h-32 sm:w-32 md:w-40 md:h-40 rounded-md bg-alcohol" onClick={alcoholScroll}>
+                            <p className="text-xxs sm:text-xs md:text-sm">Add</p>
+                            <p className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold">Alcohol</p>
                         </button>
-                        <button className="h-20 w-20 xs:h-24 xs:w-24 rounded-md bg-mixer" onClick={mixerScroll}>
-                            <p className="text-xxs">Add</p>
-                            <p className="text-lg xs:text-xl font-semibold">Mixer</p>
+                        <button className="h-20 w-20 xs:h-24 xs:w-24 sm:h-32 sm:w-32 md:w-40 md:h-40 rounded-md bg-mixer" onClick={mixerScroll}>
+                            <p className="text-xxs sm:text-xs md:text-sm">Add</p>
+                            <p className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold">Mixer</p>
                         </button>
-                        <button className="h-20 w-20 xs:h-24 xs:w-24 rounded-md bg-extra" onClick={extraScroll}>
-                            <p className="text-xxs">Add</p>
-                            <p className="text-lg xs:text-xl font-semibold">Extras</p>
+                        <button className="h-20 w-20 xs:h-24 xs:w-24 sm:h-32 sm:w-32 md:w-40 md:h-40 rounded-md bg-extra" onClick={extraScroll}>
+                            <p className="text-xxs sm:text-xs md:text-sm">Add</p>
+                            <p className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold">Extras</p>
                         </button>
                     </div>
                 </div>
@@ -142,9 +142,9 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
 
             </section>
 
-            <section className="ingredient-page-section bg-alcohol" ref={alcoholRef}>
+            <section className="ingredient-page-section flex-col justify-start snap-start sm:no-snap md:flex-row md:items-center bg-alcohol" ref={alcoholRef}>
 
-                <div onClick={toggleAlcoholOptions} className="h-3/5 flex justify-center items-end">
+                <div onClick={toggleAlcoholOptions} className="h-3/5 flex justify-center items-end md:w-1/2 md:items-center">
                     <button className="h-60 w-60 xs:w-72 xs:h-72 rounded-full border text-white border-white flex flex-col justify-center items-center focus:outline-none focus:ring focus:border-blue-300 noSelect">
                         <p className="text-lg mb-1">Choose your</p>
                         <p className="text-5xl">Alcohol</p>
@@ -152,7 +152,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                 </div>
 
 
-                <div className="w-full h-2/5 flex flex-col justify-center items-center pt-5 mb-10">
+                <div className="w-full h-2/5 flex flex-col justify-center items-center pt-5 mb-10 md:w-1/2 md:h-1/5">
 
                     {chosenAlcohol.length > 0 &&
                         <p className="text-white mb-4">Your alcohols:</p>
@@ -208,9 +208,9 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
 
             </section>
 
-            <section className="ingredient-page-section bg-mixer" ref={mixerRef}>
+            <section className="ingredient-page-section flex-col justify-start snap-start sm:no-snap md:flex-row md:items-center bg-mixer" ref={mixerRef}>
 
-                <div className="h-3/5 flex justify-center items-end"
+                <div className="h-3/5 flex justify-center items-end md:w-1/2 md:items-center"
                     onClick={toggleMixerOptions}>
                     <button className="h-60 w-60 xs:w-72 xs:h-72 rounded-full border text-white border-white flex flex-col justify-center items-center focus:outline-none focus:ring focus:border-blue-300 noSelect">
                         <p className="text-lg mb-1">Choose your</p>
@@ -219,7 +219,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                 </div>
 
 
-                <div className="w-full h-2/5 flex flex-col justify-center items-center pt-5 mb-10">
+                <div className="w-full h-2/5 flex flex-col justify-center items-center pt-5 mb-10 md:w-1/2 md:h-1/5">
 
                     {chosenMixer.length > 0 &&
                         <p className="text-white mb-4">Your mixers:</p>
@@ -273,9 +273,9 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
 
             </section>
 
-            <section className="ingredient-page-section bg-extra" ref={extraRef}>
+            <section className="ingredient-page-section flex-col justify-start snap-start sm:no-snap md:flex-row md:items-center bg-extra" ref={extraRef}>
 
-                <div className="h-3/5 flex justify-center items-end"
+                <div className="h-3/5 flex justify-center items-end md:w-1/2 md:items-center"
                     onClick={toggleExtraOptions}>
                     <button className="h-60 w-60 xs:w-72 xs:h-72 rounded-full border text-white border-white flex flex-col justify-center items-center focus:outline-none focus:ring focus:border-blue-300 noSelect">
                         <p className="text-lg mb-1">Choose your</p>
@@ -284,7 +284,7 @@ const Ingredients = ({ toggleAlcoholOptions, toggleMixerOptions, toggleExtraOpti
                 </div>
 
 
-                <div className="w-full h-2/5 flex flex-col justify-center items-center pt-5 mb-10">
+                <div className="w-full h-2/5 flex flex-col justify-center items-center pt-5 mb-10 md:w-1/2 md:h-1/5">
 
                     {chosenExtra.length > 0 &&
                         <p className="text-white mb-4">Your extras:</p>
