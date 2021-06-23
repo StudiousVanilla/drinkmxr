@@ -22,13 +22,13 @@ const Instructions = ({toggleInstructions}) => {
                             </p>
                                 <div className="relative h-16 w-12">
                                     <div className="absolute w-10 h-14 flex justify-center items-center bg-extra">
-                                        <div className="w-5 h-5 rounded-full border border-white"/>
+                                    
                                     </div>
                                     <div className="absolute animate-scrollUp3 w-10 h-14 flex justify-center items-center bg-mixer">
-                                        <div className="w-5 h-5 rounded-full border border-white"/>
+                                    
                                     </div>
                                     <div className="absolute animate-scrollUp2 w-10 h-14 flex justify-center items-center bg-alcohol">
-                                        <div className="w-5 h-5 rounded-full border border-white"/>
+                                    
                                     </div>
                                     <div className="absolute animate-scrollUp1 w-10 h-14 flex justify-center items-center  bg-gray-700">
                                         <div className="w-6 h-6">
