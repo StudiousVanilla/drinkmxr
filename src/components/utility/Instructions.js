@@ -20,7 +20,7 @@ const Instructions = ({toggleInstructions}) => {
                             <p className="w-2/3 px-1 pb-5 border-b border-alcohol">
                                 1. Scroll the categories
                             </p>
-                                <div className="relative h-16 w-12">
+                                <div className="relative ml-2 h-16 w-12">
                                     <div className="absolute w-10 h-14 flex justify-center items-center bg-extra">
                                     
                                     </div>
@@ -59,7 +59,20 @@ const Instructions = ({toggleInstructions}) => {
                             <div>
                                 <img src={shaker} alt="Cocktail shaker" className="animate-smallShaker" />
                             </div>          
-                        </div>    
+                        </div>  
+
+                        <div className="w-full flex justify-evenly items-center px-1">
+                            <p className="w-2/3 px-1 pb-5">
+                                4. Drink complexity
+                            </p>
+                            <div className="flex justify-center items-end">
+                                <div className="h-3 w-3 mr-2 rounded-full bg-purple-500 animate-popUp1"/>
+                                <div className="h-3 w-3 mr-2 rounded-full bg-purple-500 animate-popUp2"/>
+                                <div className="h-3 w-3 mr-2 rounded-full bg-gray-300 animate-popUp3"/>
+                            </div>          
+                        </div>
+
+
                 </div>
 
                 <div onClick={toggleInstructions}

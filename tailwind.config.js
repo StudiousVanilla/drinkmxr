@@ -92,7 +92,24 @@ module.exports = {
           '91%': {backgroundColor:'#60A5FA'},
           '96%': {backgroundColor:'#ffffff'},
           '100%': {backgroundColor:'#F87171'}
-        }
+        },
+        popUp1:{
+          '10%': { transform: 'translate(0px, -3px)'},
+          '13%': { transform: 'translate(0px, 0px)'},
+          '100%':{ transform: 'translate(0px, 0px)'}
+        },
+        popUp2:{
+          '14%': { transform: 'translate(0px, 0px)'},
+          '19%': { transform: 'translate(0px, -3px)'},
+          '24%':{ transform: 'translate(0px, 0px)'},
+          '100%':{ transform: 'translate(0px, 0px)'}
+        },
+        popUp3:{
+          '25%': { transform: 'translate(0px, 0px)'},
+          '31%': { transform: 'translate(0px, -3px)'},
+          '36%':{ transform: 'translate(0px, 0px)'},
+          '100%':{ transform: 'translate(0px, 0px)'}
+        },
       },
       animation: {
         shaker: 'shaker 2.5s linear infinite',
@@ -100,6 +117,9 @@ module.exports = {
         scrollUp1: 'scrollUp1 10s linear infinite',
         scrollUp2: 'scrollUp2 10s linear infinite',
         scrollUp3: 'scrollUp3 10s linear infinite',
+        popUp1: 'popUp1 2s linear infinite',
+        popUp2: 'popUp2 2s linear infinite',
+        popUp3: 'popUp3 2s linear infinite',
         backgroundColorCycle: 'backgroundColorCycle 15s linear infinite'
        }
     },
