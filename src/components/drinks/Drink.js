@@ -45,7 +45,7 @@ const Drink = ({name, glass, measures, ingredients, instructions, toggleDrinkDis
 
             <div className="w-screen 
             sm:w-3/4 sm:p-6 sm:bg-gray-800 sm:rounded-lg overflow-x-hidden
-            scrollbar scrollbar-thumb-gray-300 scrollbar-track-gray-900">
+            sm:scrollbar sm:scrollbar-thumb-gray-300 sm:scrollbar-track-gray-900">
                 <div className="sm:hidden">
                     <DrinksNav/>
                 </div>           
