@@ -16,7 +16,7 @@ DrinkMXR will return a list of cocktails you can make with **all** of those ingr
 - The application was deployed to Netlify
 
 
-** :file_folder: Data **
+**:file_folder: Data**
 
 - Application sends a query string to the [backend](https://github.com/StudiousVanilla/api_practice_backend) which uses grpahQL to fetch the relevant data from [thecocktaildb](https://www.thecocktaildb.com/api.php).
 
@@ -24,7 +24,7 @@ DrinkMXR will return a list of cocktails you can make with **all** of those ingr
 
 - Some data is then *cleaned* on the frontend eg. Converting Imperial units ot Metric
 
-**:art: Styling ##**
+**:art: Styling**
 
 - This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
 
